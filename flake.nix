@@ -11,12 +11,12 @@
     nixosConfigurations.shiro = nixpkgs.lib.nixosSystem {
       system = "x86-64_linux";
       modules = [
-        ./configuration.nix
+        ./nixos
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.radar = import ./home.nix;
+          home-manager.users.radar = import ./home-manager/home.nix;
         }
       ];
     };
