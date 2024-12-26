@@ -23,7 +23,6 @@
     zip
 
     # cli tools
-    fzf
     ripgrep
     fd
     eza
@@ -47,6 +46,13 @@
 
     # password manager
     keepassxc
+
+    # programming
+    nodePackages_latest.nodejs
+    python3
+    go
+    gcc
+    tree-sitter
   ];
 
   home.stateVersion = "24.11";

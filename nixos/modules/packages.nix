@@ -6,7 +6,13 @@
 
   environment.systemPackages = with pkgs; [
     git
+    gh
+    lazygit
     vim
+    neovim
+    gcc
+    gnumake
+    cmake
     wget
     unzip
     eza

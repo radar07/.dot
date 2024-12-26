@@ -5,6 +5,7 @@
     ./bat
     ./git
     ./lazygit
+    ./neovim
     ./starship
     ./tmux
     ./vim
@@ -12,6 +13,10 @@
   ];
 
   programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+  programs.fzf = {
     enable = true;
     enableZshIntegration = true;
   };

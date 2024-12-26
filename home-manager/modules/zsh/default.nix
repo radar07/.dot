@@ -44,6 +44,9 @@
 
       # cd for directory jumping
       cd = "z";
+
+      # vim for neovim
+      vim = "nvim";
     };
 
     # plugins = {};
