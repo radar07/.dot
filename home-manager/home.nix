@@ -42,6 +42,10 @@
 
     # applications
     alacritty
+    discord
+    obsidian
+    obs-studio
+    vlc
     zathura
 
     # password manager
