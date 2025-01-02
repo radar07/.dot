@@ -10,7 +10,7 @@ return {
         },
         transparent = true,
       })
-      vim.cmd.colorscheme("kanagawa")
+      -- vim.cmd.colorscheme("kanagawa")
     end,
   },
   {
@@ -18,7 +18,7 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require("tokyonight").setup({
-        style = "moon",
+        style = "night",
         styles = {
           functions = { italic = true },
         },
@@ -94,7 +94,7 @@ return {
         },
       })
       -- load the colorscheme here
-      -- vim.cmd.colorscheme("catppuccin")
+      vim.cmd.colorscheme("catppuccin")
     end,
   },
 }
