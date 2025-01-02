@@ -4,6 +4,7 @@
   imports = [
     ./alacritty
     ./bat
+    ./fastfetch
     ./git
     ./lazygit
     ./neovim
