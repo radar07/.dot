@@ -13,6 +13,10 @@
     initExtra = (builtins.readFile ./zshrc);
 
     shellAliases = {
+      # Colorize grep output (good for log files)
+      grep = "grep --color=auto";
+      egrep = "egrep --color=auto";
+      fgrep = "fgrep --color=auto";
       # eza instead of ls
       ls = "eza --color=always --grid --icons --group-directories-first";
       la = "eza -a --color=always --grid --icons --group-directories-first";
