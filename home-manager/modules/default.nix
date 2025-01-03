@@ -12,6 +12,7 @@
     ./starship
     ./tmux
     ./vim
+    ./zed
     ./zsh
   ];
 
