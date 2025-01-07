@@ -54,6 +54,8 @@
     };
 
     # plugins = {};
-    # sessionVariables = {};
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
   };
 }
