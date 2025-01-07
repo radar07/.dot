@@ -10,7 +10,7 @@ return {
         },
         transparent = true,
       })
-      -- vim.cmd.colorscheme("kanagawa")
+      vim.cmd.colorscheme("kanagawa")
     end,
   },
   {
@@ -94,7 +94,7 @@ return {
         },
       })
       -- load the colorscheme here
-      vim.cmd.colorscheme("catppuccin")
+      -- vim.cmd.colorscheme("catppuccin")
     end,
   },
 }
