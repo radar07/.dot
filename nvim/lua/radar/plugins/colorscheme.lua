@@ -5,6 +5,7 @@ return {
     config = function()
       require("kanagawa").setup({
         theme = "wave",
+        functionStyle = { italic = true },
         background = {
           dark = "wave",
         },
