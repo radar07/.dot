@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -32,7 +30,7 @@
     pulse.enable = true;
   };
 
-  services.xserver.videoDrivers = ["amdgpu"];
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;

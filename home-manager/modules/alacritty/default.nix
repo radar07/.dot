@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   programs.alacritty = {
     enable = true;
@@ -18,26 +16,26 @@
 
       # Normal colors
       colors.normal = {
-        black   = "#32302f";
-        red     = "#ea6962";
-        green   = "#a9b665";
-        yellow  = "#d8a657";
-        blue    = "#7daea3";
+        black = "#32302f";
+        red = "#ea6962";
+        green = "#a9b665";
+        yellow = "#d8a657";
+        blue = "#7daea3";
         magenta = "#d3869b";
-        cyan    = "#89b482";
-        white   = "#d4be98";
+        cyan = "#89b482";
+        white = "#d4be98";
       };
 
       # Bright colors (same as normal colors)
       colors.bright = {
-        black   = "#32302f";
-        red     = "#ea6962";
-        green   = "#a9b665";
-        yellow  = "#d8a657";
-        blue    = "#7daea3";
+        black = "#32302f";
+        red = "#ea6962";
+        green = "#a9b665";
+        yellow = "#d8a657";
+        blue = "#7daea3";
         magenta = "#d3869b";
-        cyan    = "#89b482";
-        white   = "#d4be98";
+        cyan = "#89b482";
+        white = "#d4be98";
       };
 
       env = {

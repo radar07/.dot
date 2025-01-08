@@ -5,7 +5,10 @@
   users.users.radar = {
     isNormalUser = true;
     description = "Pranav RK";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
     ];
     shell = pkgs.zsh;

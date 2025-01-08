@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   boot = {
     loader = {

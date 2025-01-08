@@ -11,5 +11,6 @@
     lua-language-server
   ];
 
-  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dot/nvim";
+  home.file.".config/nvim".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dot/nvim";
 }
