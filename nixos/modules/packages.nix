@@ -18,5 +18,7 @@
     eza
     zoxide
     tmux
+    nixd
+    nixfmt-rfc-style
   ];
 }

@@ -41,6 +41,7 @@ return {
         -- markdown = { "prettier" },
         lua = { "stylua" },
         python = { "isort", "black" },
+        nix = { "nixfmt" },
       },
 
       format_on_save = {
