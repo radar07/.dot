@@ -9,5 +9,6 @@
     ./packages.nix
     ./system.nix
     ./user.nix
+    ./vars.nix
   ];
 }
