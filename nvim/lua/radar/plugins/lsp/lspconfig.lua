@@ -292,6 +292,21 @@ return {
       handlers = handlers,
       capabilities = capabilities,
       on_attach = on_attach,
+      settings = {
+        nixd = {
+          nixpkgs = {
+            expr = "import <nixpkgs> { }",
+          },
+          formatting = {
+            command = { "nixfmt" },
+          },
+          options = {
+            nixos = {
+              expr = '(builtins.getFlake "/home/radar/.dot").nixosConfigurations.shiro.options',
+            },
+          },
+        },
+      },
     })
   end,
 }
