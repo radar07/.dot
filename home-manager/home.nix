@@ -46,7 +46,6 @@
     obsidian
     obs-studio
     vlc
-    zathura
 
     # password manager
     keepassxc

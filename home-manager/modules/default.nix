@@ -10,6 +10,7 @@
     ./starship
     ./tmux
     ./vim
+    ./zathura
     ./zed
     ./zsh
   ];
