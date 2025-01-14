@@ -6,7 +6,7 @@
     userName = "Pranav RK";
     userEmail = "pranavrk7@gmail.com";
     signing = {
-      key = "37F03B878831C3FC";
+      key = "827B74C9D9367BD0878CBFDC91E939C3CF30AE5";
     };
 
     aliases = {
@@ -23,7 +23,7 @@
 
     extraConfig = {
       core = {
-        # editor = "nvim";
+        editor = "nvim";
         diff = "auto";
         status = "auto";
         branch = "auto";
@@ -70,7 +70,9 @@
       log = {
         showSignature = false;
       };
-      # commit = { gpgsign = true; };
+      commit = {
+        gpgsign = true;
+      };
     };
   };
 }
