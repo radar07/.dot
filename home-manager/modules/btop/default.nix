@@ -2,7 +2,7 @@
   programs.btop = {
     enable = true;
     settings = {
-      color_theme = "tokyo-night";
+      color_theme = "gruvbox_dark";
       vim_keys = true;
     };
   };
