@@ -9,6 +9,7 @@
     tree-sitter
 
     lua-language-server
+    llvmPackages_latest.clang-tools
     stylua
   ];
 

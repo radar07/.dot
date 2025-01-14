@@ -20,7 +20,7 @@ vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.list = true
 vim.opt.listchars = { tab = "→ ", extends = "›", precedes = "‹", nbsp = "␣", trail = "·" }
 vim.opt.number = true -- set numbered lines
-vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
+-- vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
 vim.opt.pumheight = 10 -- pop up menu height
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
