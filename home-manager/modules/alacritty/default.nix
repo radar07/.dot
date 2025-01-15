@@ -47,23 +47,23 @@
       };
 
       font = {
-        size = 14.0;
+        size = 12.0;
       };
 
       font.bold = {
-        family = "Jetbrains Mono Nerd Font";
+        family = "Fira Code Nerd Font";
       };
 
       font.bold_italic = {
-        family = "Jetbrains Mono Nerd Font";
+        family = "Fira Code Nerd Font";
       };
 
       font.italic = {
-        family = "Jetbrains Mono Nerd Font";
+        family = "Fira Code Nerd Font";
       };
 
       font.normal = {
-        family = "Jetbrains Mono Nerd Font";
+        family = "Fira Code Nerd Font";
       };
 
       font.offset = {
