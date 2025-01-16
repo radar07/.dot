@@ -20,8 +20,12 @@
       ghostty,
       ...
     }@inputs:
+    let
+      inherit (self) outputs;
+    in
     {
       nixosConfigurations.shiro = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs outputs; };
         system = "x86-64_linux";
         modules = [
           ./nixos/configuration.nix
