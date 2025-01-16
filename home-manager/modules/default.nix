@@ -6,6 +6,7 @@
     ./fastfetch
     ./git
     ./lazygit
+    ./mpv
     ./neovim
     ./starship
     ./tmux
