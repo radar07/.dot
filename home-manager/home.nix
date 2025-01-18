@@ -42,7 +42,7 @@
 
     # applications
     alacritty
-    discord
+    vesktop
     obsidian
     obs-studio
     vlc
