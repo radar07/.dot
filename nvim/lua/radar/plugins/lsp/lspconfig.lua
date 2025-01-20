@@ -282,12 +282,6 @@ return {
       on_attach = on_attach,
     })
 
-    lspconfig["clangd"].setup({
-      handlers = handlers,
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
     lspconfig["nixd"].setup({
       handlers = handlers,
       capabilities = capabilities,

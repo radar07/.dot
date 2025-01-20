@@ -6,6 +6,7 @@
 
   environment.systemPackages = with pkgs; [
     anki-bin
+    clang-tools
     git
     gh
     lazygit
