@@ -11,7 +11,7 @@ return {
         },
         transparent = true,
       })
-      vim.cmd.colorscheme("kanagawa")
+      -- vim.cmd.colorscheme("kanagawa")
     end,
   },
   {
@@ -21,7 +21,7 @@ return {
       require("tokyonight").setup({
         style = "night",
         styles = {
-          functions = { italic = true },
+          -- functions = { italic = true },
         },
         transparent = true,
         sidebars = { "qf", "vista_kind", "terminal", "packer" },
@@ -40,7 +40,7 @@ return {
         term_colors = false,
         styles = {
           -- keywords = { "italic" },
-          functions = { "italic" },
+          -- functions = { "italic" },
         },
         integrations = {
           cmp = true,
@@ -95,7 +95,7 @@ return {
         },
       })
       -- load the colorscheme here
-      -- vim.cmd.colorscheme("catppuccin")
+      vim.cmd.colorscheme("catppuccin")
     end,
   },
 }
