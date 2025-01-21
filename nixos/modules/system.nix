@@ -14,5 +14,11 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # Enable autoupgrade
+  system.autoUpgrade = {
+    enable = true;
+    dates = "weekly";
+  };
+
   system.stateVersion = "24.11";
 }

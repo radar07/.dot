@@ -6,12 +6,14 @@
     ./fastfetch
     ./ghostty
     ./git
+    ./hyprland
     ./lazygit
     ./mpv
     ./neovim
     ./starship
     ./tmux
     ./vim
+    ./wofi
     ./zathura
     ./zed
     ./zsh

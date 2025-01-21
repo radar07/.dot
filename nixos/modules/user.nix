@@ -43,4 +43,8 @@
     enableSSHSupport = true;
     pinentryPackage = pkgs.pinentry-gnome3;
   };
+
+  programs.hyprland = {
+    enable = true;
+  };
 }
