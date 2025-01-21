@@ -4,6 +4,7 @@
     ./bat
     ./btop
     ./fastfetch
+    ./ghostty
     ./git
     ./lazygit
     ./mpv
