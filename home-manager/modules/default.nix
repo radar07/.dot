@@ -13,6 +13,7 @@
     ./starship
     ./tmux
     ./vim
+    ./waybar
     ./wofi
     ./zathura
     ./zed

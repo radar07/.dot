@@ -12,6 +12,8 @@
     lazygit
     vim
     neovim
+    manga-tui
+    mangayomi
     gcc
     gnumake
     cmake

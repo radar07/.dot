@@ -58,6 +58,14 @@
     tree-sitter
   ];
 
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "la-capitaine-icon-theme";
+      package = pkgs.la-capitaine-icon-theme;
+    };
+  };
+
   home.stateVersion = "24.11";
 
   programs.home-manager.enable = true;

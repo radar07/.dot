@@ -1,6 +1,13 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    brightnessctl
+    hypridle
+    swaynotificationcenter
+    waypaper
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -17,9 +24,9 @@
       "$browser" = "firefox";
 
       env = [
-        "XCURSOR_SIZE,12"
-        "HYPRCURSOR_SIZE,12"
-        "HYPRCURSOR_THEME,Breeze-Dark"
+        "XCURSOR_SIZE,14"
+        "HYPRCURSOR_SIZE,14"
+        "HYPRCURSOR_THEME,capitaine-cursors"
 
         "NIXOS_OZONE_WL,1"
         "MOZ_ENABLE_WAYLAND,1"
@@ -35,7 +42,12 @@
         "QT_QPA_PLATFORMTHEME,qt6ct"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+      ];
 
+      exec-once = [
+        "waybar"
+        "waypaper --restore"
+        "hypridle"
       ];
 
       monitor = [
@@ -48,7 +60,6 @@
         border_size = 1;
         "col.active_border" = "rgb(969696)";
         "col.inactive_border" = "rgb(595959)";
-
         resize_on_border = false;
         allow_tearing = false;
       };
@@ -56,7 +67,6 @@
       decoration = {
         active_opacity = 1.0;
         inactive_opacity = 0.8;
-
         blur = {
           enabled = false;
           size = 3;
@@ -82,7 +92,6 @@
       input = {
         kb_layout = "us";
         follow_mouse = 1;
-
         touchpad = {
           natural_scroll = true;
         };
@@ -138,8 +147,8 @@
         ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 
-        ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
-        ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+        ",XF86MonBrightnessUp, exec, brightnessctl s 5%+"
+        ",XF86MonBrightnessDown, exec, brightnessctl s 5%-"
       ];
     };
   };
