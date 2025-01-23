@@ -64,6 +64,10 @@
       name = "la-capitaine-icon-theme";
       package = pkgs.la-capitaine-icon-theme;
     };
+    cursorTheme = {
+      name = "capitaine-cursors";
+      package = pkgs.capitaine-cursors;
+    };
   };
 
   home.stateVersion = "24.11";

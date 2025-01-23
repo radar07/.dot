@@ -14,6 +14,7 @@
     neovim
     manga-tui
     mangayomi
+    lxappearance
     gcc
     gnumake
     cmake

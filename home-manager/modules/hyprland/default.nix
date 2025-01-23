@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     brightnessctl
     hypridle
+    hyprpaper
     swaynotificationcenter
     waypaper
   ];
@@ -24,8 +25,8 @@
       "$browser" = "firefox";
 
       env = [
-        "XCURSOR_SIZE,14"
-        "HYPRCURSOR_SIZE,14"
+        "XCURSOR_SIZE,16"
+        "HYPRCURSOR_SIZE,16"
         "HYPRCURSOR_THEME,capitaine-cursors"
 
         "NIXOS_OZONE_WL,1"
@@ -103,7 +104,7 @@
           "$mod, RETURN, exec, $terminal"
           "$mod, M, exec, $fileManager"
           "$mod, W, exec, $browser"
-          "$mod, D, exec, $menu"
+          "$mod, SPACE, exec, $menu"
           "$mod, ESCAPE, exec, hyprlock"
           "$mod, Q, killactive,"
           "$mod SHIFT, Q, exit,"

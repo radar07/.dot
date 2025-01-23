@@ -23,7 +23,9 @@
           "custom/exit"
         ];
 
-        "custom/logo" = { };
+        "custom/logo" = {
+          format = "  ";
+        };
 
         "hyprland/workspaces" = {
           on-click = "activate";
@@ -254,6 +256,12 @@
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         animation-direction: alternate;
+      }
+
+      #custom-logo {
+          color: #89b4fa;
+          margin: 0px;
+          font-size: 16px;
       }
     '';
   };

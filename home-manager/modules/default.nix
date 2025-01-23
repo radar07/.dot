@@ -14,6 +14,7 @@
     ./tmux
     ./vim
     ./waybar
+    ./wlogout
     ./wofi
     ./zathura
     ./zed
