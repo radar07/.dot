@@ -4,10 +4,17 @@
   home.packages = with pkgs; [
     brightnessctl
     hypridle
-    hyprpaper
     swaynotificationcenter
     waypaper
   ];
+
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      preload = "~/Pictures/Wallpapers/sushi.jpg";
+      wallpaper = "eDP-1, ~/Pictures/Wallpapers/sushi.jpg";
+    };
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -47,7 +54,6 @@
 
       exec-once = [
         "waybar"
-        "waypaper --restore"
         "hypridle"
       ];
 
