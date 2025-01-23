@@ -64,14 +64,15 @@
       general = {
         gaps_in = 2;
         gaps_out = 2;
-        border_size = 1;
-        "col.active_border" = "rgb(969696)";
-        "col.inactive_border" = "rgb(595959)";
+        border_size = 2;
+        "col.active_border" = "rgba(07b5efff)";
+        "col.inactive_border" = "rgba(ffffff00)";
         resize_on_border = false;
         allow_tearing = false;
       };
 
       decoration = {
+        rounding = 2;
         active_opacity = 1.0;
         inactive_opacity = 0.8;
         blur = {
@@ -79,6 +80,10 @@
           size = 3;
           passes = 1;
         };
+      };
+
+      master = {
+        new_status = "master";
       };
 
       animations = {
