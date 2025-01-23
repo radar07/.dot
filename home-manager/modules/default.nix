@@ -7,6 +7,7 @@
     ./ghostty
     ./git
     ./hyprland
+    ./hyprlock
     ./lazygit
     ./mpv
     ./neovim
@@ -14,7 +15,7 @@
     ./tmux
     ./vim
     ./waybar
-    ./wlogout
+    # ./wlogout
     ./wofi
     ./zathura
     ./zed

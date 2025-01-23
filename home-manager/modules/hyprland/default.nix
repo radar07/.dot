@@ -33,8 +33,9 @@
 
       env = [
         "XCURSOR_SIZE,16"
+        "XCURSOR_THEME,Adwaita"
         "HYPRCURSOR_SIZE,16"
-        "HYPRCURSOR_THEME,capitaine-cursors"
+        "HYPRCURSOR_THEME,Adwaita"
 
         "NIXOS_OZONE_WL,1"
         "MOZ_ENABLE_WAYLAND,1"
