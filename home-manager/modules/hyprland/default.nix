@@ -5,7 +5,6 @@
     brightnessctl
     hypridle
     swaynotificationcenter
-    waypaper
   ];
 
   services.hyprpaper = {

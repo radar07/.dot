@@ -7,9 +7,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # ghostty = {
-    #   url = "github:ghostty-org/ghostty";
-    # };
   };
 
   outputs =
@@ -17,7 +14,6 @@
       self,
       nixpkgs,
       home-manager,
-      # ghostty,
       ...
     }@inputs:
     let
@@ -36,11 +32,6 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.radar = import ./home-manager/home.nix;
           }
-          # {
-          #   environment.systemPackages = [
-          #     ghostty.packages.x86_64-linux.default
-          #   ];
-          # }
         ];
       };
     };
