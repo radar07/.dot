@@ -8,6 +8,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "libvirtd"
     ];
     packages = with pkgs; [
     ];
@@ -53,5 +54,7 @@
     enable = true;
   };
 
-  programs.dconf.enable = true;
+  programs.virt-manager.enable = true;
+
+  virtualisation.libvirtd.enable = true;
 }
