@@ -12,6 +12,7 @@
     lazygit
     vim
     neovim
+    networkmanager
     manga-tui
     mangayomi
     lxappearance

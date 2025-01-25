@@ -93,7 +93,7 @@
           tooltip-format-ethernet = "  {ifname} ({ipaddr}/{cidr})";
           tooltip-format-disconnected = "󰈂 Disconnected";
           max-length = 50;
-          on-click = "nm-connection-editor";
+          on-click = "nm-tui";
         };
 
         "battery" = {
