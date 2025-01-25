@@ -5,6 +5,16 @@
     ./modules
   ];
 
+  nixpkgs = {
+    overlays = [
+    ];
+
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
+    };
+  };
+
   home.username = "radar";
   home.homeDirectory = "/home/radar";
 
@@ -60,14 +70,14 @@
 
   gtk = {
     enable = true;
+    theme = {
+      name = "Adwaita Dark";
+      package = pkgs.adwaita-qt;
+    };
     iconTheme = {
       name = "la-capitaine-icon-theme";
       package = pkgs.la-capitaine-icon-theme;
     };
-    # cursorTheme = {
-    #   name = "capitaine-cursors";
-    #   package = pkgs.capitaine-cursors;
-    # };
   };
 
   home.stateVersion = "24.11";
