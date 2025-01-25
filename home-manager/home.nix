@@ -50,6 +50,16 @@
     podman
     podman-tui
 
+    # screenshot
+    grim
+    slurp
+
+    # screen recorder
+    wf-recorder
+
+    # clipboard
+    wl-clipboard
+
     # applications
     alacritty
     vesktop

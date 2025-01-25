@@ -7,6 +7,12 @@
     swaynotificationcenter
   ];
 
+  services.wlsunset = {
+    enable = true;
+    sunrise = "06:00";
+    sunset = "19:00";
+  };
+
   services.hyprpaper = {
     enable = true;
     settings = {
