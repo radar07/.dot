@@ -5,6 +5,7 @@
     brightnessctl
     hypridle
     swaynotificationcenter
+    xdg-desktop-portal-hyprland
   ];
 
   services.wlsunset = {

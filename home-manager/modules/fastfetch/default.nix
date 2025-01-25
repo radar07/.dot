@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       logo = {
-        source = "~/Downloads/Tengen-Toppa-Gurren.png";
-        width = 30;
+        # source = "~/Downloads/Tengen-Toppa-Gurren.png";
+        # width = 30;
       };
       modules = [
         "title"
