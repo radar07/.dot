@@ -71,6 +71,7 @@
     keepassxc
 
     # programming
+    cargo
     nodePackages_latest.nodejs
     python3
     go

@@ -6,12 +6,14 @@
 
   environment.systemPackages = with pkgs; [
     anki-bin
+    bun
     clang-tools
     git
     gh
     lazygit
     vim
     neovim
+    pnpm
     networkmanager
     manga-tui
     mangayomi
