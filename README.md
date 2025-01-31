@@ -1,5 +1,7 @@
 # Dotfiles
 
+![preview](.github/desktop.png)
+
 ## Operating system
 * [NixOS](https://nixos.org/)
 
@@ -21,4 +23,3 @@
 ## File manager
 * [Yazi](https://github.com/sxyazi/yazi) (TUI)
 
-![preview](.github/desktop.png)
