@@ -6,6 +6,7 @@
     ./fastfetch
     ./ghostty
     ./git
+    ./helix
     ./hyprland
     ./hyprlock
     ./lazygit
