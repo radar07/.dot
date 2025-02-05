@@ -17,8 +17,9 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = "~/Pictures/Wallpapers/sushi.jpg";
-      wallpaper = "eDP-1, ~/Pictures/Wallpapers/sushi.jpg";
+      # preload = "~/Pictures/Wallpapers/street.png";
+      preload = "~/Pictures/Wallpapers/space-piano.png";
+      wallpaper = "eDP-1, ~/Pictures/Wallpapers/space-piano.png";
     };
   };
 
@@ -143,7 +144,7 @@
 
       input = {
         kb_layout = "us";
-        follow_mouse = 1;
+        # follow_mouse = 1;
         touchpad = {
           natural_scroll = true;
         };

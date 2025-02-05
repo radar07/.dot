@@ -13,6 +13,8 @@
     lazygit
     vim
     neovim
+    openjdk21
+    jetbrains.idea-community
     pnpm
     networkmanager
     manga-tui
