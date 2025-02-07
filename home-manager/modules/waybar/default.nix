@@ -279,7 +279,7 @@
 
       #taskbar button:hover,
       #workspaces button:hover {
-        color: #b4befe;
+        color: #1e1e2e;
         border-radius: 15px;
         padding-left: 2px;
         padding-right: 2px;

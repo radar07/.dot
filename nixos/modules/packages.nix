@@ -17,6 +17,7 @@
     jetbrains.idea-community
     pnpm
     networkmanager
+    libnotify
     manga-tui
     mangayomi
     lxappearance
