@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     brightnessctl
+    bc
     hypridle
     swaynotificationcenter
     xdg-desktop-portal-hyprland
@@ -17,9 +18,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      # preload = "~/Pictures/Wallpapers/street.png";
-      preload = "~/Pictures/Wallpapers/space-piano.png";
-      wallpaper = "eDP-1, ~/Pictures/Wallpapers/space-piano.png";
+      preload = "~/Pictures/Wallpapers/laundry.jpg";
+      wallpaper = "eDP-1, ~/Pictures/Wallpapers/laundry.jpg";
     };
   };
 
@@ -106,7 +106,7 @@
         gaps_in = 2;
         gaps_out = 2;
         border_size = 2;
-        "col.active_border" = "rgba(07b5efff)";
+        "col.active_border" = "rgba(cba6f7ff)";
         "col.inactive_border" = "rgba(ffffff00)";
         resize_on_border = false;
         allow_tearing = false;
@@ -176,6 +176,9 @@
           "$mod SHIFT, j, resizeactive, 0 15"
           "$mod SHIFT, k, resizeactive, 0 -15"
           "$mod SHIFT, l, resizeactive, 15 0"
+
+          ", Print, exec, grimblast --notify copy area"
+          "$mod, Print, exec, grimblast --notify copy active"
         ]
         ++ (builtins.concatLists (
           builtins.genList (

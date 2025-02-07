@@ -53,6 +53,7 @@
     # screenshot
     grim
     slurp
+    grimblast
 
     # screen recorder
     wf-recorder
