@@ -26,6 +26,7 @@
           "network#speed"
           "custom/separator#line"
           "pulseaudio#microphone"
+          "custom/separator#line"
           "pulseaudio"
           "custom/separator#line"
           "battery"
@@ -77,7 +78,7 @@
             ""
             ""
           ];
-          format-charging = " {icon} {capacity}% ";
+          format-charging = "{icon} {capacity}% ";
           format-plugged = "{icon} {capacity}%";
           tooltip-format = " {power}W - {timeTo}";
 
@@ -158,7 +159,7 @@
         "pulseaudio" = {
           format = "{icon} {volume}%";
           format-bluetooth = "{icon} 󰂰 {volume}%";
-          format-muted = "󰖁";
+          format-muted = "󰖁 Muted";
           on-click = "$HOME/.config/hypr/scripts/Volume.sh --toggle";
           format-icons = {
             headphone = "";
@@ -182,7 +183,7 @@
         "pulseaudio#microphone" = {
           format = "{format_source}";
           format-source = " {volume}%";
-          format-source-muted = "";
+          format-source-muted = "  Muted";
           on-click-right = "pavucontrol -t 4";
           tooltip-format = "{source_desc} | {source_volume}%";
           scroll-step = 5;
