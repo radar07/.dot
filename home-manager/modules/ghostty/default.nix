@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -9,8 +9,8 @@
     # Fonts
     # font-family = "FiraCode Nerd Font"
     # font-family-bold = "FiraCode Nerd Font"
-    # font-family-italic = "Maple Mono"
-    # font-family-bold-italic = "Maple Mono"
+    # font-family-italic = "FiraCode Nerd Font"
+    # font-family-bold-italic = "FiraCode Nerd Font"
 
     font-size = 14
 
