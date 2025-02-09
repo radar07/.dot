@@ -83,14 +83,16 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Adwaita Dark";
-      package = pkgs.adwaita-qt;
+      name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
     };
     iconTheme = {
       name = "la-capitaine-icon-theme";
       package = pkgs.la-capitaine-icon-theme;
     };
   };
+
+  home.sessionVariables.GTK_THEME = "Adwaita-dark";
 
   home.stateVersion = "24.11";
 
