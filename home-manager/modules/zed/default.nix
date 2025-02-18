@@ -55,7 +55,7 @@
       theme = {
         mode = "system";
         light = "One Light";
-        dark = "Tokyo Night";
+        dark = "Gruvbox Dark Hard";
       };
       ui_font_size = 16;
       buffer_font_size = 16;
