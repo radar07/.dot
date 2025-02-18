@@ -19,8 +19,17 @@
     }@inputs:
     let
       inherit (self) outputs;
+      
+      # Supported systems
+      systems = [
+        "x86_64-linux"
+      ];
+
+      forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
+      # packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+
       nixosConfigurations.shiro = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
         system = "x86-64_linux";
@@ -29,7 +38,7 @@
         ];
       };
 
-      homeConfigurations."radar@shiro" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."shiro" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
