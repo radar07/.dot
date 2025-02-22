@@ -87,8 +87,8 @@
       package = pkgs.adw-gtk3;
     };
     iconTheme = {
-      name = "la-capitaine-icon-theme";
-      package = pkgs.la-capitaine-icon-theme;
+      name = "papirus-icon-theme";
+      package = pkgs.papirus-icon-theme;
     };
   };
 
