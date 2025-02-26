@@ -18,8 +18,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = "~/Pictures/Wallpapers/pixel-car.png";
-      wallpaper = "eDP-1, ~/Pictures/Wallpapers/pixel-car.png";
+      preload = "~/Pictures/Wallpapers/main-street.png";
+      wallpaper = "eDP-1, ~/Pictures/Wallpapers/main-street.png";
     };
   };
 

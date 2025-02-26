@@ -24,6 +24,8 @@
     gcc
     gnumake
     cmake
+    ninja
+    meson
     wget
     unzip
     eza
