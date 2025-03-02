@@ -20,6 +20,10 @@
   security.pam.services.greetd.enableGnomeKeyring = true;
   security.pam.services.hyprlock = { };
 
+  programs.nix-ld = {
+    enable = true;
+  };
+
   programs.zsh = {
     enable = true;
     autosuggestions.enable = true;

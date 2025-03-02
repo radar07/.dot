@@ -8,6 +8,7 @@
     anki-bin
     bun
     clang-tools
+    rustup
     git
     gh
     lazygit
