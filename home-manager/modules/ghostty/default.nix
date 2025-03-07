@@ -7,10 +7,10 @@
 
   xdg.configFile."ghostty/config".text = ''
     # Fonts
-    # font-family = "FiraCode Nerd Font"
-    # font-family-bold = "FiraCode Nerd Font"
-    # font-family-italic = "FiraCode Nerd Font"
-    # font-family-bold-italic = "FiraCode Nerd Font"
+    font-family = "JetbrainsMono Nerd Font"
+    font-family-bold = "JetbrainsMono Nerd Font"
+    font-family-italic = "JetbrainsMono Nerd Font"
+    font-family-bold-italic = "JetbrainsMono Nerd Font"
 
     font-size = 14
 
@@ -27,7 +27,7 @@
 
     theme = tokyonight
 
-    background-opacity = 0.9
+    # background-opacity = 0.9
     background-blur-radius = 20
 
     window-padding-y = 2,0

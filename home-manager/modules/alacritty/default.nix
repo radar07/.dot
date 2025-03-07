@@ -51,19 +51,19 @@
       };
 
       font.bold = {
-        family = "Fira Code Nerd Font";
+        family = "Mononoki Nerd Font";
       };
 
       font.bold_italic = {
-        family = "Fira Code Nerd Font";
+        family = "Mononoki Nerd Font";
       };
 
       font.italic = {
-        family = "Fira Code Nerd Font";
+        family = "Mononoki Nerd Font";
       };
 
       font.normal = {
-        family = "Fira Code Nerd Font";
+        family = "Mononoki Nerd Font";
       };
 
       font.offset = {
