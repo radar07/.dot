@@ -16,6 +16,7 @@
     neovim
     openjdk21
     jetbrains.idea-community
+    vscodium
     pnpm
     networkmanager
     libnotify

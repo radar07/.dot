@@ -7,10 +7,10 @@
 
   xdg.configFile."ghostty/config".text = ''
     # Fonts
-    font-family = "JetbrainsMono Nerd Font"
-    font-family-bold = "JetbrainsMono Nerd Font"
-    font-family-italic = "JetbrainsMono Nerd Font"
-    font-family-bold-italic = "JetbrainsMono Nerd Font"
+    # font-family = "FiraCode Nerd Font"
+    # font-family-bold = "FiraCode Nerd Font"
+    # font-family-italic = "FiraCode Nerd Font"
+    # font-family-bold-italic = "FiraCode Nerd Font"
 
     font-size = 14
 
