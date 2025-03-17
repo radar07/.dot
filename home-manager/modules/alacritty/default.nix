@@ -6,36 +6,37 @@
         live_config_reload = true;
       };
 
-      # Colors (Gruvbox Material Hard Dark)
+      # Colors (Tokyo Night)
+      # Source https//github.com/zatchheems/tokyo-night-alacritty-theme
 
       # Default colors
       colors.primary = {
-        background = "#1d2021";
-        foreground = "#d4be98";
+        background = "#1a1b26";
+        foreground = "#a9b1d6";
       };
 
       # Normal colors
       colors.normal = {
-        black = "#32302f";
-        red = "#ea6962";
-        green = "#a9b665";
-        yellow = "#d8a657";
-        blue = "#7daea3";
-        magenta = "#d3869b";
-        cyan = "#89b482";
-        white = "#d4be98";
+        black = "#32344a";
+        red = "#f7768e";
+        green = "#9ece6a";
+        yellow = "#e0af68";
+        blue = "#7aa2f7";
+        magenta = "#ad8ee6";
+        cyan = "#449dab";
+        white = "#787c99";
       };
 
-      # Bright colors (same as normal colors)
+      # Bright colors
       colors.bright = {
-        black = "#32302f";
-        red = "#ea6962";
-        green = "#a9b665";
-        yellow = "#d8a657";
-        blue = "#7daea3";
-        magenta = "#d3869b";
-        cyan = "#89b482";
-        white = "#d4be98";
+        black = "#444b6a";
+        red = "#ff7a93";
+        green = "#b9f27c";
+        yellow = "#ff9e64";
+        blue = "#7da6ff";
+        magenta = "#bb9af7";
+        cyan = "#0db9d7";
+        white = "#acb0d0";
       };
 
       env = {
@@ -47,23 +48,23 @@
       };
 
       font = {
-        size = 12.0;
+        size = 14.0;
       };
 
       font.bold = {
-        family = "Mononoki Nerd Font";
+        family = "JetbrainsMono Nerd Font";
       };
 
       font.bold_italic = {
-        family = "Mononoki Nerd Font";
+        family = "JetbrainsMono Nerd Font";
       };
 
       font.italic = {
-        family = "Mononoki Nerd Font";
+        family = "JetbrainsMono Nerd Font";
       };
 
       font.normal = {
-        family = "Mononoki Nerd Font";
+        family = "JetbrainsMono Nerd Font";
       };
 
       font.offset = {

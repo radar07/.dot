@@ -17,6 +17,7 @@
     openjdk21
     jetbrains.idea-community
     dbeaver-bin
+    vscode
     vscodium
     pnpm
     networkmanager

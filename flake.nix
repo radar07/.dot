@@ -19,7 +19,7 @@
     }@inputs:
     let
       inherit (self) outputs;
-      
+
       # Supported systems
       systems = [
         "x86_64-linux"
