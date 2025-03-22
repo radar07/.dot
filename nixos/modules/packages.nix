@@ -7,6 +7,7 @@
   environment.systemPackages = with pkgs; [
     anki-bin
     bun
+    spotify
     clang-tools
     rustup
     git
