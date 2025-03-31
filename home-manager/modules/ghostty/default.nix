@@ -27,7 +27,7 @@
 
     theme = tokyonight
 
-    # background-opacity = 0.9
+    background-opacity = 0.9
     background-blur-radius = 20
 
     window-padding-y = 2,0

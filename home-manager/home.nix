@@ -26,6 +26,7 @@
     yazi
     ani-cli
     hugo
+    zola
     tre-command
 
     # archives

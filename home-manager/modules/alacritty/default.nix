@@ -52,19 +52,19 @@
       };
 
       font.bold = {
-        family = "JetbrainsMono Nerd Font";
+        family = "Iosevka Nerd Font";
       };
 
       font.bold_italic = {
-        family = "JetbrainsMono Nerd Font";
+        family = "Iosevka Nerd Font";
       };
 
       font.italic = {
-        family = "JetbrainsMono Nerd Font";
+        family = "Iosevka Nerd Font";
       };
 
       font.normal = {
-        family = "JetbrainsMono Nerd Font";
+        family = "Iosevka Nerd Font";
       };
 
       font.offset = {

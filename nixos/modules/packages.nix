@@ -22,6 +22,7 @@
     vscodium
     pnpm
     networkmanager
+    blueman
     libnotify
     manga-tui
     mangayomi
