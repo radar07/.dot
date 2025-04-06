@@ -9,6 +9,5 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.mononoki
     nerd-fonts.victor-mono
-    maple-mono
   ];
 }
