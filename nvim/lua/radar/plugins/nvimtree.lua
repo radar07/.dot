@@ -12,6 +12,10 @@ return {
           quit_on_open = true,
         },
       },
+      view = {
+        side = "right",
+        width = 50,
+      },
       disable_netrw = true,
       hijack_netrw = true,
       prefer_startup_root = true,
