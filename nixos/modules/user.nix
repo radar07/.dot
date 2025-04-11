@@ -6,6 +6,7 @@
     isNormalUser = true;
     description = "Pranav RK";
     extraGroups = [
+      "docker"
       "networkmanager"
       "wheel"
       "libvirtd"
@@ -61,4 +62,6 @@
   programs.virt-manager.enable = true;
 
   virtualisation.libvirtd.enable = true;
+
+  virtualisation.docker.enable = true;
 }
