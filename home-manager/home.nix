@@ -39,6 +39,7 @@
     eza
     delta
     tldr
+    ijq
 
     btop
     htop
