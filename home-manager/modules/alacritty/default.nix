@@ -52,19 +52,19 @@
       };
 
       font.bold = {
-        family = "Iosevka Nerd Font";
+        family = "FiraCode Nerd Font";
       };
 
       font.bold_italic = {
-        family = "Iosevka Nerd Font";
+        family = "FiraCode Nerd Font";
       };
 
       font.italic = {
-        family = "Iosevka Nerd Font";
+        family = "FiraCode Nerd Font";
       };
 
       font.normal = {
-        family = "Iosevka Nerd Font";
+        family = "FiraCode Nerd Font";
       };
 
       font.offset = {
