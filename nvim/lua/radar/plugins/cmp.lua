@@ -75,8 +75,8 @@ return {
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
+        { name = "copilot" },
         { name = "luasnip" }, -- snippets
-        { name = "codeium" },
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
         { name = "crates" },
@@ -86,6 +86,7 @@ return {
         format = lspkind.cmp_format({
           maxwidth = 50,
           ellipsis_char = "...",
+          symbol_map = { Copilot = "" },
         }),
       },
       experimental = {

@@ -1,11 +1,24 @@
 return {
-  "github/copilot.vim",
-  event = "InsertEnter",
-  lazy = false,
-  autoStart = true,
-  config = function()
-    vim.g.copilot_assume_mapped = true
-    vim.api.nvim_set_keymap("i", "<M-Space>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-    vim.g.copilot_no_tab_map = true
-  end,
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    event = "BufReadPost",
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+      filetypes = {
+        markdown = true,
+        help = true,
+      },
+    },
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    dependencies = { "zbirenbaum/copilot.lua" },
+    config = function()
+      local copilot_cmp = require("copilot_cmp")
+      copilot_cmp.setup({})
+    end,
+  },
 }
