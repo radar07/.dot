@@ -89,7 +89,7 @@
 
       window = {
         dynamic_title = false;
-        opacity = 0.95;
+        # opacity = 0.95;
       };
 
       window.padding = {

@@ -40,6 +40,7 @@
     delta
     tldr
     ijq
+    asdf-vm
 
     btop
     htop
