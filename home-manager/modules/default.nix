@@ -16,6 +16,7 @@
     ./tmux
     ./vim
     ./waybar
+    ./wezterm
     ./wofi
     ./zathura
     ./zed
