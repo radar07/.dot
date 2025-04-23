@@ -1,8 +1,8 @@
 return {
-  "neovim/nvim-lspconfig",
-  event = { "BufReadPre", "BufNewFile" },
+  'neovim/nvim-lspconfig',
+  event = { 'BufReadPre', 'BufNewFile' },
   dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
+    'hrsh7th/cmp-nvim-lsp',
   },
   opts = {
     diagnostics = {
@@ -10,16 +10,16 @@ return {
       update_in_insert = false,
       virtual_text = {
         spacing = 4,
-        source = "if_many",
-        prefix = "icons",
+        source = 'if_many',
+        prefix = 'icons',
       },
       severity_sort = true,
     },
   },
   config = function()
-    local lspconfig = require("lspconfig")
+    local lspconfig = require 'lspconfig'
     -- local util = require("lspconfig.util")
-    local cmp_nvim_lsp = require("cmp_nvim_lsp")
+    local cmp_nvim_lsp = require 'cmp_nvim_lsp'
 
     local on_attach = function(_, bufnr)
       -- stylua: ignore start
@@ -44,150 +44,132 @@ return {
     -- used to enable autocompletion (assign to every lsp server config)
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    -- Add the border on hover and on signature help popup window
-    local handlers = {
-      ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
-      ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
+    local x = vim.diagnostic.severity
+    vim.diagnostic.config {
+      virtual_text = { prefix = '●' },
+      signs = { text = { [x.ERROR] = ' ', [x.WARN] = ' ', [x.HINT] = ' ', [x.INFO] = ' ' } },
+      underline = true,
+      float = { border = 'rounded' },
     }
 
-    local x = vim.diagnostic.severity
-    vim.diagnostic.config({
-      virtual_text = { prefix = "●" },
-      signs = { text = { [x.ERROR] = " ", [x.WARN] = " ", [x.HINT] = " ", [x.INFO] = " " } },
-      underline = true,
-      float = { border = "rounded" },
-    })
-
     -- html server
-    lspconfig["html"].setup({
-      handlers = handlers,
+    lspconfig['html'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
     -- css server
-    lspconfig["cssls"].setup({
-      handlers = handlers,
+    lspconfig['cssls'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
     -- json server
-    lspconfig["jsonls"].setup({
-      handlers = handlers,
+    lspconfig['jsonls'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "json", "jsonc" },
+      filetypes = { 'json', 'jsonc' },
       settings = {
         json = {
           -- Schemas https://www.schemastore.org
           schemas = {
             {
-              fileMatch = { "package.json" },
-              url = "https://json.schemastore.org/package.json",
+              fileMatch = { 'package.json' },
+              url = 'https://json.schemastore.org/package.json',
             },
             {
-              fileMatch = { "tsconfig*.json" },
-              url = "https://json.schemastore.org/tsconfig.json",
-            },
-            {
-              fileMatch = {
-                ".prettierrc",
-                ".prettierrc.json",
-                "prettier.config.json",
-              },
-              url = "https://json.schemastore.org/prettierrc.json",
-            },
-            {
-              fileMatch = { ".eslintrc", ".eslintrc.json" },
-              url = "https://json.schemastore.org/eslintrc.json",
-            },
-            {
-              fileMatch = { ".babelrc", ".babelrc.json", "babel.config.json" },
-              url = "https://json.schemastore.org/babelrc.json",
-            },
-            {
-              fileMatch = { "lerna.json" },
-              url = "https://json.schemastore.org/lerna.json",
-            },
-            {
-              fileMatch = { "now.json", "vercel.json" },
-              url = "https://json.schemastore.org/now.json",
+              fileMatch = { 'tsconfig*.json' },
+              url = 'https://json.schemastore.org/tsconfig.json',
             },
             {
               fileMatch = {
-                ".stylelintrc",
-                ".stylelintrc.json",
-                "stylelint.config.json",
+                '.prettierrc',
+                '.prettierrc.json',
+                'prettier.config.json',
               },
-              url = "http://json.schemastore.org/stylelintrc.json",
+              url = 'https://json.schemastore.org/prettierrc.json',
+            },
+            {
+              fileMatch = { '.eslintrc', '.eslintrc.json' },
+              url = 'https://json.schemastore.org/eslintrc.json',
+            },
+            {
+              fileMatch = { '.babelrc', '.babelrc.json', 'babel.config.json' },
+              url = 'https://json.schemastore.org/babelrc.json',
+            },
+            {
+              fileMatch = { 'lerna.json' },
+              url = 'https://json.schemastore.org/lerna.json',
+            },
+            {
+              fileMatch = { 'now.json', 'vercel.json' },
+              url = 'https://json.schemastore.org/now.json',
+            },
+            {
+              fileMatch = {
+                '.stylelintrc',
+                '.stylelintrc.json',
+                'stylelint.config.json',
+              },
+              url = 'http://json.schemastore.org/stylelintrc.json',
             },
           },
         },
       },
-    })
+    }
 
     -- typescript server
-    lspconfig["ts_ls"].setup({
-      handlers = handlers,
+    lspconfig['ts_ls'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
     -- astro language server
-    lspconfig["astro"].setup({
-      handlers = handlers,
+    lspconfig['astro'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
     -- svelte language server
-    lspconfig["svelte"].setup({
-      handlers = handlers,
+    lspconfig['svelte'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-      cmd = { "svelteserver", "--stdio" },
-      filetypes = { "svelte" },
-    })
+      cmd = { 'svelteserver', '--stdio' },
+      filetypes = { 'svelte' },
+    }
 
     -- tailwindcss server
-    lspconfig["tailwindcss"].setup({
-      handlers = handlers,
+    lspconfig['tailwindcss'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
     -- python server
-    lspconfig["pyright"].setup({
-      handlers = handlers,
+    lspconfig['pyright'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
     -- c/c++ server
-    lspconfig["clangd"].setup({
-      handlers = handlers,
+    lspconfig['clangd'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
     -- bash server
-    lspconfig["bashls"].setup({
-      handlers = handlers,
+    lspconfig['bashls'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
     -- ruby server
-    lspconfig["ruby_lsp"].setup({
-      handlers = handlers,
+    lspconfig['ruby_lsp'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
     -- lua server (with special settings)
-    lspconfig["lua_ls"].setup({
-      handlers = handlers,
+    lspconfig['lua_ls'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = { -- custom settings for lua
@@ -195,25 +177,24 @@ return {
           -- make the language server recognize "vim" global
           hint = true,
           diagnostics = {
-            globals = { "vim" },
+            globals = { 'vim' },
           },
           workspace = {
             -- make language server aware of runtime files
             library = {
-              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-              [vim.fn.stdpath("config") .. "/lua"] = true,
+              [vim.fn.expand '$VIMRUNTIME/lua'] = true,
+              [vim.fn.stdpath 'config' .. '/lua'] = true,
             },
           },
         },
       },
-    })
+    }
 
     -- golang server
-    lspconfig["gopls"].setup({
-      handlers = handlers,
+    lspconfig['gopls'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-      cmd = { "gopls" },
+      cmd = { 'gopls' },
       settings = {
         gopls = {
           experimentalPostfixCompletions = true,
@@ -224,23 +205,21 @@ return {
           staticcheck = true,
         },
       },
-    })
+    }
 
     -- templ
-    lspconfig["templ"].setup({
-      handlers = handlers,
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
+    -- lspconfig['templ'].setup {
+    --   capabilities = capabilities,
+    --   on_attach = on_attach,
+    -- }
 
     -- rust analyzer
-    lspconfig["rust_analyzer"].setup({
-      handlers = handlers,
+    lspconfig['rust_analyzer'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-      cmd = { "rustup", "run", "stable", "rust-analyzer" },
+      cmd = { 'rustup', 'run', 'stable', 'rust-analyzer' },
       settings = {
-        ["rust-analyzer"] = {
+        ['rust-analyzer'] = {
           diagnostics = {
             enable = true,
           },
@@ -248,11 +227,11 @@ return {
             enable = true,
           },
           checkOnSave = {
-            command = "clippy",
+            command = 'clippy',
           },
         },
       },
-    })
+    }
 
     -- erlang
     -- lspconfig["erlangls"].setup({
@@ -276,23 +255,21 @@ return {
     -- })
 
     -- Zig
-    lspconfig["zls"].setup({
-      handlers = handlers,
+    lspconfig['zls'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
-    lspconfig["nixd"].setup({
-      handlers = handlers,
+    lspconfig['nixd'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = {
         nixd = {
           nixpkgs = {
-            expr = "import <nixpkgs> { }",
+            expr = 'import <nixpkgs> { }',
           },
           formatting = {
-            command = { "nixfmt" },
+            command = { 'nixfmt' },
           },
           options = {
             nixos = {
@@ -301,6 +278,6 @@ return {
           },
         },
       },
-    })
+    }
   end,
 }
