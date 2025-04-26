@@ -12,21 +12,18 @@
         config = wezterm.config_builder()
       end
 
-      config.color_scheme = "kanagawabones"
+      config.color_scheme = "Catppuccin Mocha"
 
       config.font_size = 14
       config.font = wezterm.font_with_fallback({
         { family = "FiraCode Nerd Font", weight = 450 },
-        { family = "Iosevka Nerd Font", weight = "Regular" },
-        { family = "ZedMono Nerd Font", weight = "Regular" },
         { family = "JetBrains Mono Nerd Font", weight = "Regular" },
-        { family = "Mononoki Nerd Font", weight = "Regular" },
       })
 
       -- FiraCode
       config.harfbuzz_features = { "zero", "cv02", "ss02", "ss03", "ss05" }
 
-      config.window_background_opacity = 0.9
+      -- config.window_background_opacity = 0.9
 
       config.warn_about_missing_glyphs = false
 

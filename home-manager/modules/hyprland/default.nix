@@ -19,7 +19,10 @@
     enable = true;
     settings = {
       preload = "~/Pictures/Wallpapers/street.png";
-      wallpaper = "eDP-1, ~/Pictures/Wallpapers/street.png";
+      wallpaper = [
+        "eDP-1, ~/Pictures/Wallpapers/street.png"
+        "HDMI-A-1, ~/Pictures/Wallpapers/street.png"
+      ];
     };
   };
 
@@ -68,7 +71,8 @@
       "$mod" = "SUPER";
       "$menu" = "wofi drun";
       # "$terminal" = "ghostty";
-      "$terminal" = "alacritty";
+      # "$terminal" = "alacritty";
+      "$terminal" = "wezterm";
       "$fileManager" = "nautilus";
       "$browser" = "firefox";
 
@@ -136,8 +140,8 @@
       binds = { };
 
       dwindle = {
-        pseudotile = true;
-        preserve_split = true;
+        # pseudotile = true;
+        # preserve_split = true;
       };
 
       gestures = {
