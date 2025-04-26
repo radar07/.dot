@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    cursor.url = "github:omarcresp/cursor-flake/main";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -15,6 +16,7 @@
       self,
       nixpkgs,
       home-manager,
+      cursor,
       ...
     }@inputs:
     let
@@ -35,6 +37,14 @@
         system = "x86-64_linux";
         modules = [
           ./nixos/configuration.nix
+          (
+            { pkgs, ... }:
+            {
+              environment.systemPackages = [
+                cursor.packages.${pkgs.system}.default
+              ];
+            }
+          )
         ];
       };
 
