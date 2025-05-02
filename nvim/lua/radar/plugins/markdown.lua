@@ -1,29 +1,12 @@
 return {
   {
-    "MeanderingProgrammer/render-markdown.nvim",
-    opts = {
-      file_types = { "markdown", "norg", "rmd", "org" },
-      code = {
-        sign = true,
-        width = "block",
-        right_pad = 1,
-      },
-      heading = {
-        sign = true,
-        icons = {},
-      },
-    },
-    ft = { "markdown", "norg", "rmd", "org" },
-  },
-  {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = function()
-      vim.fn["mkdp#util#install"]()
-    end,
+    'toppair/peek.nvim',
+    event = { 'VeryLazy' },
+    build = 'deno task --quiet build:fast',
     config = function()
-      vim.cmd([[do FileType]])
+      require('peek').setup()
+      vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
+      vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
     end,
-    ft = { "markdown" },
   },
 }

@@ -59,8 +59,8 @@ autocmd('FileType', {
     vim.lsp.start {
       name = 'Ziggy LSP',
       cmd = { 'ziggy', 'lsp' },
-      root_dir = vim.fn.getwd(),
-      flags = { exit_timeout = 1000 },
+      root_dir = vim.fs.dirname(vim.fs.find({ '.git' }, { upward = true })[1]),
+      -- flags = { exit_timeout = 1000 },
     }
   end,
 })
@@ -72,8 +72,8 @@ autocmd('FileType', {
     vim.lsp.start {
       name = 'Ziggy LSP',
       cmd = { 'ziggy', 'lsp', '--schema' },
-      root_dir = vim.fn.getwd(),
-      flags = { exit_timeout = 1000 },
+      root_dir = vim.fs.dirname(vim.fs.find({ '.git' }, { upward = true })[1]),
+      -- flags = { exit_timeout = 1000 },
     }
   end,
 })
@@ -85,8 +85,8 @@ autocmd('FileType', {
     vim.lsp.start {
       name = 'SuperHTML LSP',
       cmd = { 'superhtml', 'lsp' },
-      root_dir = vim.fn.getwd(),
-      flags = { exit_timeout = 1000 },
+      root_dir = vim.fs.dirname(vim.fs.find({ '.git' }, { upward = true })[1]),
+      -- flags = { exit_timeout = 1000 },
     }
   end,
 })
