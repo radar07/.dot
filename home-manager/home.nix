@@ -81,6 +81,7 @@
     go
     gcc
     tree-sitter
+    terraform
   ];
 
   gtk = {

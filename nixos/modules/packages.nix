@@ -21,6 +21,7 @@
     vscode
     vscodium
     pnpm
+    deno
     networkmanager
     blueman
     libnotify

@@ -10,6 +10,7 @@
     PATH = [
       "${XDG_BIN_HOME}"
       "$HOME/.zig"
+      "$HOME/Code/zine/zig-out/bin"
     ];
   };
 }
