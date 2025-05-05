@@ -79,6 +79,7 @@
     nodePackages_latest.nodejs
     python3
     go
+    golangci-lint
     gcc
     tree-sitter
     terraform

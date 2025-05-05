@@ -8,6 +8,7 @@
     anki-bin
     bun
     spotify
+    clang
     clang-tools
     rustup
     git
@@ -15,6 +16,7 @@
     lazygit
     vim
     neovim
+    helix
     openjdk21
     jetbrains.idea-community
     dbeaver-bin
