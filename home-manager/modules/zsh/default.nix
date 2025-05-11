@@ -8,7 +8,7 @@
       size = 1000000;
     };
 
-    initExtra = (builtins.readFile ./zshrc);
+    initContent = (builtins.readFile ./zshrc);
 
     shellAliases = {
       # Colorize grep output (good for log files)
