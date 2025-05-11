@@ -74,7 +74,8 @@
       # "$terminal" = "alacritty";
       "$terminal" = "wezterm";
       "$fileManager" = "nautilus";
-      "$browser" = "firefox";
+      # "$browser" = "firefox";
+      "$browser" = "zen";
 
       env = [
         "XCURSOR_SIZE,16"

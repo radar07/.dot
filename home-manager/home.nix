@@ -52,6 +52,7 @@
     # containers
     podman
     podman-tui
+    podman-desktop
 
     # screenshot
     grim
@@ -79,7 +80,7 @@
     nodePackages_latest.nodejs
     python3
     go
-    golangci-lint
+    # golangci-lint
     gcc
     tree-sitter
     terraform

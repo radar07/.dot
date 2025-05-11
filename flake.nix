@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     cursor.url = "github:omarcresp/cursor-flake/main";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -17,6 +18,7 @@
       nixpkgs,
       home-manager,
       cursor,
+      zen-browser,
       ...
     }@inputs:
     let
@@ -42,6 +44,7 @@
             {
               environment.systemPackages = [
                 cursor.packages.${pkgs.system}.default
+                zen-browser.packages.${pkgs.system}.default
               ];
             }
           )
