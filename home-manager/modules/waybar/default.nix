@@ -30,6 +30,7 @@
           "pulseaudio"
           "custom/separator#line"
           "battery"
+          "bluetooth"
           "tray"
           "custom/notification"
         ];
@@ -65,6 +66,16 @@
           format = " | ";
           interval = "once";
           tooltip = false;
+        };
+
+        "bluetooth" = {
+          format = "";
+          # format-disabled = ""; # an empty format will hide the module
+          format-connected = "{num_connections}";
+          tooltip-format = "{device_alias}";
+          tooltip-format-connected = "{device_enumerate}";
+          tooltip-format-enumerate-connected = "{device_alias}";
+          on-click = "blueman-manager";
         };
 
         "battery" = {
