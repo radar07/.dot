@@ -13,6 +13,7 @@
     ./mpv
     ./neovim
     ./starship
+    ./swaync
     ./tmux
     ./vim
     ./waybar
