@@ -41,6 +41,7 @@
     tldr
     ijq
     asdf-vm
+    jujutsu
 
     btop
     htop
@@ -80,7 +81,6 @@
     nodePackages_latest.nodejs
     python3
     go
-    # golangci-lint
     gcc
     tree-sitter
     terraform
