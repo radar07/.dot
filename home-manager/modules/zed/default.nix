@@ -44,7 +44,7 @@
 
       hour_format = "hour24";
       auto_update = false;
-      buffer_font_family = "JetBrainsMono Nerd Font";
+      buffer_font_family = "Iosevka Nerd Font";
       buffer_font_features = {
         calt = true;
       };
@@ -58,7 +58,7 @@
         dark = "One Dark";
       };
       ui_font_size = 16;
-      buffer_font_size = 16;
+      buffer_font_size = 18;
 
       experimental.theme_overrides = {
         syntax = {
@@ -92,7 +92,7 @@
         };
         font_family = "FiraCode Nerd Font";
         font_features = null;
-        font_size = null;
+        font_size = 16;
         line_height = "comfortable";
         option_as_meta = false;
         button = false;

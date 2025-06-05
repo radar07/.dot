@@ -84,6 +84,7 @@
     gcc
     tree-sitter
     terraform
+    uv
   ];
 
   gtk = {
