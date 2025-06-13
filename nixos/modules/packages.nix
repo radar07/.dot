@@ -19,6 +19,7 @@
     helix
     openjdk21
     jetbrains.idea-community
+    jetbrains.pycharm-community
     windsurf
     dbeaver-bin
     vscode
