@@ -35,6 +35,7 @@
 
     # cli tools
     ripgrep
+    ast-grep
     fd
     eza
     delta
