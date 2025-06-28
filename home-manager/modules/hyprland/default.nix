@@ -70,9 +70,9 @@
     settings = {
       "$mod" = "SUPER";
       "$menu" = "wofi drun";
-      # "$terminal" = "ghostty";
+      "$terminal" = "ghostty";
       # "$terminal" = "alacritty";
-      "$terminal" = "wezterm";
+      # "$terminal" = "wezterm";
       "$fileManager" = "nautilus";
       # "$browser" = "firefox";
       "$browser" = "zen";
