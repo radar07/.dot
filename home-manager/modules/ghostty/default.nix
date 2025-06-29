@@ -7,21 +7,15 @@
 
   xdg.configFile."ghostty/config".text = ''
     # Fonts
-    # font-family = "FiraCode Nerd Font"
-    # font-family-bold = "FiraCode Nerd Font"
-    # font-family-italic = "FiraCode Nerd Font"
-    # font-family-bold-italic = "FiraCode Nerd Font"
+    font-family = "Iosevka Nerd Font"
+    font-family-bold = "Iosevka Nerd Font"
+    font-family-italic = "Iosevka Nerd Font"
+    font-family-bold-italic = "Iosevka Nerd Font"
 
-    font-size = 14
+    font-size = 16
 
-    # font-variation = wght=450
+    font-variation = wght=450
     window-inherit-font-size = true
-
-    # font-feature = zero
-    # font-feature = cv02
-    # font-feature = ss02
-    # font-feature = ss03
-    # font-feature = ss05
 
     mouse-hide-while-typing = true
 
