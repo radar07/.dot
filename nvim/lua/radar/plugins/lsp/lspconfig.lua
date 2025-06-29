@@ -207,12 +207,6 @@ return {
       },
     }
 
-    -- templ
-    -- lspconfig['templ'].setup {
-    --   capabilities = capabilities,
-    --   on_attach = on_attach,
-    -- }
-
     -- rust analyzer
     lspconfig['rust_analyzer'].setup {
       capabilities = capabilities,
