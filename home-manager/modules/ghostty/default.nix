@@ -7,12 +7,9 @@
 
   xdg.configFile."ghostty/config".text = ''
     # Fonts
-    font-family = "Iosevka Nerd Font"
-    font-family-bold = "Iosevka Nerd Font"
-    font-family-italic = "Iosevka Nerd Font"
-    font-family-bold-italic = "Iosevka Nerd Font"
+    # font-family = "Iosevka Nerd Font"
 
-    font-size = 16
+    font-size = 14
 
     font-variation = wght=450
     window-inherit-font-size = true
@@ -22,7 +19,7 @@
     theme = tokyonight
 
     background-opacity = 0.9
-    background-blur-radius = 20
+    background-blur-radius = true
 
     window-padding-y = 2,0
     window-padding-balance = true
@@ -32,7 +29,6 @@
     window-decoration = false
 
     # Keybinds
-    keybind = clear
     keybind = super+shift+r=reload_config
 
     ## Tabs
