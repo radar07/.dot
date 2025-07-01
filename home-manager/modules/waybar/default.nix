@@ -127,8 +127,8 @@
         "network#speed" = {
           interval = 1;
           format = "{ifname}";
-          format-wifi = "  {bandwidthUpBytes}  {bandwidthDownBytes}   {essid}";
-          format-ethernet = "  {bandwidthUpBytes}  {bandwidthDownBytes} 󰈁 {ipaddr}";
+          format-wifi = "  {bandwidthUpBytes}  {bandwidthDownBytes}   ";
+          format-ethernet = "  {bandwidthUpBytes}  {bandwidthDownBytes} 󰈁 ";
           format-disconnected = "󰌙";
           tooltip-format = "{ipaddr}";
           format-linked = "󰈁 {ifname} (No IP)";
