@@ -18,10 +18,10 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = "~/Pictures/Wallpapers/street.png";
+      preload = "~/Pictures/Wallpapers/diner-lonely-road.jpg";
       wallpaper = [
-        "eDP-1, ~/Pictures/Wallpapers/street.png"
-        "HDMI-A-1, ~/Pictures/Wallpapers/street.png"
+        "eDP-1, ~/Pictures/Wallpapers/diner-lonely-road.jpg"
+        "HDMI-A-1, ~/Pictures/Wallpapers/diner-lonely-road.jpg"
       ];
     };
   };
