@@ -30,7 +30,6 @@
     blueman
     libnotify
     manga-tui
-    mangayomi
     lxappearance
     gcc
     gnumake
