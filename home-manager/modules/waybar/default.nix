@@ -4,15 +4,15 @@
 
     settings = [
       {
-        layer = "top";
-        exclusive = true;
-        position = "top";
-        spacing = 1;
-        fixed-center = true;
-        ipc = true;
-        margin-top = 3;
-        margin-left = 3;
-        margin-right = 3;
+        # layer = "top";
+        # exclusive = true;
+        # position = "top";
+        # spacing = 1;
+        # fixed-center = true;
+        # ipc = true;
+        # margin-top = 3;
+        # margin-left = 3;
+        # margin-right = 3;
 
         modules-left = [
           "hyprland/workspaces"
@@ -23,19 +23,17 @@
         ];
 
         modules-right = [
-          "network#speed"
-          "custom/separator#line"
-          "pulseaudio#microphone"
-          "custom/separator#line"
-          "pulseaudio"
-          "custom/separator#line"
-          "battery"
           "bluetooth"
+          "network"
+          "pulseaudio#microphone"
+          "pulseaudio"
+          "battery"
           "tray"
           "custom/notification"
         ];
 
         "hyprland/workspaces" = {
+          disable-scroll = true;
           active-only = false;
           all-outputs = true;
           format = "{icon}";
@@ -51,10 +49,7 @@
             "9" = "九";
             "10" = "十";
           };
-          show-special = false;
           on-click = "activate";
-          on-scroll-up = "hyprctl dispatch workspace e+1";
-          on-scroll-down = "hyprctl dispatch workspace e-1";
         };
 
         "hyprland/window" = {
@@ -69,12 +64,9 @@
         };
 
         "bluetooth" = {
-          format = "";
-          # format-disabled = ""; # an empty format will hide the module
-          format-connected = "{num_connections}";
-          tooltip-format = "{device_alias}";
-          tooltip-format-connected = "{device_enumerate}";
-          tooltip-format-enumerate-connected = "{device_alias}";
+          format = " 󰂯 ";
+          format-disabled = " 󰂲 ";
+          format-connected = " 󰂱 ";
           on-click = "blueman-manager";
         };
 
@@ -89,8 +81,8 @@
             ""
             ""
           ];
-          format-charging = "{icon} {capacity}% ";
-          format-plugged = "{icon} {capacity}%";
+          format-charging = "{icon} {capacity}% ";
+          format-plugged = "{icon} {capacity}% ";
           tooltip-format = " {power}W - {timeTo}";
 
           states = {
@@ -124,26 +116,12 @@
           };
         };
 
-        "network#speed" = {
-          interval = 1;
-          format = "{ifname}";
-          format-wifi = "  {bandwidthUpBytes}  {bandwidthDownBytes}   ";
-          format-ethernet = "  {bandwidthUpBytes}  {bandwidthDownBytes} 󰈁 ";
-          format-disconnected = "󰌙";
-          tooltip-format = "{ipaddr}";
-          format-linked = "󰈁 {ifname} (No IP)";
-          tooltip-format-wifi = "{essid} {icon} {signalStrength}%";
-          tooltip-format-ethernet = "{ifname} ";
-          tooltip-format-disconnected = "Disconnected";
-          min-length = 1;
-          max-length = 40;
-          format-icons = [
-            "󰤯"
-            "󰤟"
-            "󰤢"
-            "󰤥"
-            "󰤨"
-          ];
+        "network" = {
+          format-wifi = "  {essid}";
+          format-ethernet = "  Ethernet";
+          format-linked = "  Linked (No IP)";
+          format-disconnected = "  Disconnected";
+          tooltip = false;
         };
 
         "custom/notification" = {
@@ -169,26 +147,15 @@
 
         "pulseaudio" = {
           format = "{icon} {volume}%";
-          format-bluetooth = "{icon} 󰂰 {volume}%";
-          format-muted = "󰖁 Muted";
-          on-click = "$HOME/.config/hypr/scripts/Volume.sh --toggle";
+          format-muted = "  {volume}%";
+          format-bluetooth = " {volume}%";
+          format-bluetooth-muted = "  {volume}%";
           format-icons = {
-            headphone = "";
-            hands-free = "";
-            headset = "";
-            phone = "";
-            portable = "";
-            car = "";
-            default = [
-              ""
-              ""
-              "󰕾"
-              ""
-            ];
-            ignored-sinks = [
-              "Easy Effects Sink"
-            ];
+            headphone = " ";
+            headset = " ";
+            default = [ " " ];
           };
+          on-click = "pavucontrol";
         };
 
         "pulseaudio#microphone" = {
@@ -202,86 +169,45 @@
 
         "tray" = {
           icon-size = 20;
-          spacing = 4;
+          spacing = 10;
+          cursor = true;
         };
       }
     ];
     style = ''
       * {
-        font-family: "JetbrainsMono Nerd Font";
+        font-family: "FiraCode Nerd Font";
+        font-size: 95%;
         font-weight: bold;
         min-height: 0;
-        /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-        font-size: 95%;
       }
 
-      window#waybar {
-        background: transparent;
-        border-radius: 5px;
-        color: whitesmoke;
+      #waybar {
+        background: alpha(#1e1e2e, 0.8);
       }
 
-      window#waybar.hidden {
-        opacity: 0.5;
-      }
-
-      window#waybar.empty,
-      window#waybar.empty #window {
-        padding: 0px;
-        border: 0px;
-        background-color: transparent;
-      }
-
+      window,
       tooltip {
-        color: #cdd6f4;
-        background: #1e1e2e;
-        border-radius: 10px;
-        border-width: 2px;
-        border-style: solid;
-        border-color: #11111b;
-      }
-
-      tooltip label {
-        color: #cdd6f4;
-        padding-right: 2px;
-        padding-left: 2px;
-      }
-
-      .modules-right,
-      .modules-center,
-      .modules-left {
-        border-radius: 5px 5px 5px 5px;
         background-color: #1e1e2e;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-right: 4px;
-        padding-left: 4px;
       }
 
-      #taskbar button,
+      #workspaces {
+        margin: 1px 0;
+      }
+
       #workspaces button {
-        color: #1e1e2e;
-        background-color: #cdd6f4;
+        color: #cdd6f4;
+        border: none;
         padding: 0px 5px;
-        margin: 4px 1px;
-        border-radius: 15px;
-        animation: gradient_f 20s ease-in infinite;
-        transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+        transition: none;
       }
 
-      #taskbar button.active,
       #workspaces button.active {
-        color: #1e1e2e;
+        color: #cdd6f4;
+        border: 2px solid #cba657;
         border-radius: 15px;
-        background-color: #cdd6f4;
-        min-width: 40px;
-        background-size: 400% 400%;
-        opacity: 1;
-        transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-      }
-
-      #workspaces button.focused {
-        color: #b4befe;
+        padding: 0 8px;
+        margin: 0 2px;
       }
 
       #workspaces button.urgent {
@@ -289,45 +215,27 @@
         border-radius: 10px;
       }
 
-      #taskbar button:hover,
       #workspaces button:hover {
         color: #1e1e2e;
-        border-radius: 15px;
-        padding-left: 2px;
-        padding-right: 2px;
-        animation: gradient_f 20s ease-in infinite;
-        transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+        border-bottom: 1px solid #cba657;
+        padding: 0 8px;
+        transition: none;
       }
+
       #battery,
       #bluetooth,
       #clock,
-      #disk,
-      #idle_inhibitor,
-      #tray,
-      #window,
-      #workspaces {
+      #custom-notification,
+      #network,
+      #pulseaudio,
+      #pulseaudio#microphone,
+      #tray {
         color: #cdd6f4;
         border-radius: 8px;
         padding-top: 5px;
         padding-bottom: 5px;
         padding-right: 6px;
         padding-left: 6px;
-      }
-
-      #temperature.critical {
-        background-color: #ff0000;
-      }
-
-      @keyframes blink {
-        to {
-          color: #000000;
-        }
-      }
-
-      /*-----Indicators----*/
-      #custom-hypridle.notactive,
-      #idle_inhibitor.activated {
-        color: #39ff14;
       }
 
       #battery.critical:not(.charging) {
