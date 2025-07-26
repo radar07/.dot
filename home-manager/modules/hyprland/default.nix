@@ -18,10 +18,10 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = "~/Pictures/Wallpapers/diner-lonely-road.jpg";
+      preload = "~/Pictures/Wallpapers/japanese-temple.jpeg";
       wallpaper = [
-        "eDP-1, ~/Pictures/Wallpapers/diner-lonely-road.jpg"
-        "HDMI-A-1, ~/Pictures/Wallpapers/diner-lonely-road.jpg"
+        "eDP-1, ~/Pictures/Wallpapers/japanese-temple.jpeg"
+        "HDMI-A-1, ~/Pictures/Wallpapers/japanese-temple.jpeg"
       ];
     };
   };
@@ -130,6 +130,10 @@
         };
       };
 
+      windowrule = [
+        "float, class:blueman-manager, title:blueman-manager"
+      ];
+
       master = {
         new_status = "master";
       };
@@ -139,11 +143,6 @@
       };
 
       binds = { };
-
-      dwindle = {
-        # pseudotile = true;
-        # preserve_split = true;
-      };
 
       gestures = {
         workspace_swipe = false;

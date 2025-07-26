@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       background = {
-        path = "~/Pictures/Wallpapers/pixel-galaxy.png";
+        path = "~/Pictures/Wallpapers/little-town.png";
         blur_passes = 3;
         contrast = 0.8916;
         brightness = 0.8172;

@@ -4,17 +4,8 @@
 
     settings = [
       {
-        # layer = "top";
-        # exclusive = true;
-        # position = "top";
-        # spacing = 1;
-        # fixed-center = true;
-        # ipc = true;
-        # margin-top = 3;
-        # margin-left = 3;
-        # margin-right = 3;
-
         modules-left = [
+          "custom/logo"
           "hyprland/workspaces"
         ];
 
@@ -31,6 +22,11 @@
           "tray"
           "custom/notification"
         ];
+
+        "custom/logo" = {
+          format = " ";
+          tooltip = false;
+        };
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -81,8 +77,8 @@
             ""
             ""
           ];
-          format-charging = "{icon} {capacity}% ";
-          format-plugged = "{icon} {capacity}% ";
+          format-charging = "{icon} {capacity}%";
+          format-plugged = "{icon} {capacity}%";
           tooltip-format = " {power}W - {timeTo}";
 
           states = {
@@ -200,6 +196,7 @@
         border: none;
         padding: 0px 5px;
         transition: none;
+        font-size: 1.2em;
       }
 
       #workspaces button.active {
@@ -216,7 +213,7 @@
       }
 
       #workspaces button:hover {
-        color: #1e1e2e;
+        color: #cdd6f4;
         border-bottom: 1px solid #cba657;
         padding: 0 8px;
         transition: none;
@@ -225,6 +222,7 @@
       #battery,
       #bluetooth,
       #clock,
+      #custom-logo,
       #custom-notification,
       #network,
       #pulseaudio,
@@ -236,6 +234,11 @@
         padding-bottom: 5px;
         padding-right: 6px;
         padding-left: 6px;
+      }
+
+      #custom-logo {
+        color: #89b4fa;
+        font-size: 1.2em;
       }
 
       #battery.critical:not(.charging) {
