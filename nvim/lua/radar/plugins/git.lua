@@ -1,32 +1,32 @@
 return {
   {
-    "tpope/vim-fugitive",
+    'tpope/vim-fugitive',
   },
   {
-    "lewis6991/gitsigns.nvim",
-    event = { "BufReadPre", "BufNewFile" },
+    'lewis6991/gitsigns.nvim',
+    event = { 'BufReadPre', 'BufNewFile' },
     config = function()
-      require("gitsigns").setup({
+      require('gitsigns').setup {
         signs = {
-          add = { text = "┃" },
-          change = { text = "┃" },
-          delete = { text = "_" },
-          topdelete = { text = "‾" },
-          changedelete = { text = "~" },
-          untracked = { text = "┆" },
+          add = { text = '┃' },
+          change = { text = '┃' },
+          delete = { text = '_' },
+          topdelete = { text = '‾' },
+          changedelete = { text = '~' },
+          untracked = { text = '┆' },
         },
         signs_staged = {
-          add = { text = "┃" },
-          change = { text = "┃" },
-          delete = { text = "_" },
-          topdelete = { text = "‾" },
-          changedelete = { text = "~" },
-          untracked = { text = "┆" },
+          add = { text = '┃' },
+          change = { text = '┃' },
+          delete = { text = '_' },
+          topdelete = { text = '‾' },
+          changedelete = { text = '~' },
+          untracked = { text = '┆' },
         },
         signs_staged_enable = true,
         current_line_blame = true,
         current_line_blame_opts = {
-          virt_text_pos = "right_align",
+          virt_text_pos = 'right_align',
         },
         on_attach = function(buffer)
           local gs = package.loaded.gitsigns
@@ -44,7 +44,7 @@ return {
           map("n", "<leader>ghd", gs.diffthis, "Diff this")
           map("n", "<leader>ghD", function() gs.diffthis("~") end, "Diff This ~")
         end,
-      })
+      }
     end,
   },
 }

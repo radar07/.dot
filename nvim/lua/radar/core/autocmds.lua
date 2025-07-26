@@ -32,14 +32,16 @@ autocmd('TermOpen', {
   command = 'startinsert | set winfixheight',
 })
 
--- set italic diagnostic virtual text
-autocmd('LspAttach', {
-  pattern = '*',
-  callback = function()
-    vim.cmd [[highlight DiagnosticVirtualTextHint cterm=italic gui=italic]]
-    vim.cmd [[highlight DiagnosticVirtualTextInfo cterm=italic gui=italic]]
-    vim.cmd [[highlight DiagnosticVirtualTextWarn cterm=italic gui=italic]]
-    vim.cmd [[highlight DiagnosticVirtualTextError cterm=italic gui=italic]]
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client:supports_method 'textDocument/completion' then
+      vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'fuzzy', 'popup' }
+      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+      vim.keymap.set('i', '<C-Space>', function()
+        vim.lsp.completion.get()
+      end)
+    end
   end,
 })
 

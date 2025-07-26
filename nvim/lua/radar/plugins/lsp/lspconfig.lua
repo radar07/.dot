@@ -25,12 +25,12 @@ return {
       -- stylua: ignore start
       vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { buffer = bufnr, desc = "Goto Declaration" })
       vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { buffer = bufnr, desc = "Goto Definition" })
-      vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { buffer = bufnr, desc = "Hover" })
-      vim.keymap.set( "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { buffer = bufnr, desc = "Goto implementation" })
-      vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { buffer = bufnr, desc = "References" })
-      vim.keymap.set( "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { buffer = bufnr, desc = "Signature help" })
-      vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { buffer = bufnr, desc = "Rename" })
-      vim.keymap.set( "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { buffer = bufnr, desc = "Code action" })
+      vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover({border = 'rounded'})<CR>", { buffer = bufnr, desc = "Hover" })
+      vim.keymap.set( "n", "gri", "<cmd>lua vim.lsp.buf.implementation()<CR>", { buffer = bufnr, desc = "Goto implementation" })
+      vim.keymap.set("n", "grr", "<cmd>lua vim.lsp.buf.references()<CR>", { buffer = bufnr, desc = "References" })
+      vim.keymap.set( "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { buffer = bufnr, desc = "Signature help" })
+      vim.keymap.set("n", "grn", "<cmd>lua vim.lsp.buf.rename()<CR>", { buffer = bufnr, desc = "Rename" })
+      vim.keymap.set( "n", "gra", "<cmd>lua vim.lsp.buf.code_action()<CR>", { buffer = bufnr, desc = "Code action" })
       vim.keymap.set( "n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", { buffer = bufnr, desc = "Type Definition" })
       vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = bufnr, desc = "Prev Diagnostic" })
       vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = bufnr, desc = "Next Diagnostic" })
@@ -168,45 +168,6 @@ return {
       on_attach = on_attach,
     }
 
-    -- lua server (with special settings)
-    lspconfig['lua_ls'].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = { -- custom settings for lua
-        Lua = {
-          -- make the language server recognize "vim" global
-          hint = true,
-          diagnostics = {
-            globals = { 'vim' },
-          },
-          workspace = {
-            -- make language server aware of runtime files
-            library = {
-              [vim.fn.expand '$VIMRUNTIME/lua'] = true,
-              [vim.fn.stdpath 'config' .. '/lua'] = true,
-            },
-          },
-        },
-      },
-    }
-
-    -- golang server
-    lspconfig['gopls'].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      cmd = { 'gopls' },
-      settings = {
-        gopls = {
-          experimentalPostfixCompletions = true,
-          analyses = {
-            unusedparams = true,
-            shadow = true,
-          },
-          staticcheck = true,
-        },
-      },
-    }
-
     -- rust analyzer
     lspconfig['rust_analyzer'].setup {
       capabilities = capabilities,
@@ -222,46 +183,6 @@ return {
           },
           checkOnSave = {
             command = 'clippy',
-          },
-        },
-      },
-    }
-
-    -- erlang
-    -- lspconfig["erlangls"].setup({
-    --   handlers = handlers,
-    --   capabilities = capabilities,
-    --   on_attach = on_attach,
-    -- })
-    --
-    -- Gleam
-    -- lspconfig["gleam"].setup({
-    --   handlers = handlers,
-    --   capabilities = capabilities,
-    --   on_attach = on_attach,
-    -- })
-
-    -- Zig
-    lspconfig['zls'].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-    }
-
-    lspconfig['nixd'].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        nixd = {
-          nixpkgs = {
-            expr = 'import <nixpkgs> { }',
-          },
-          formatting = {
-            command = { 'nixfmt' },
-          },
-          options = {
-            nixos = {
-              expr = '(builtins.getFlake "/home/radar/.dot").nixosConfigurations.shiro.options',
-            },
           },
         },
       },
