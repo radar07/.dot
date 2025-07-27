@@ -50,9 +50,7 @@ vim.opt.updatetime = 200 -- faster completion (4000ms default)
 -- vim.opt.writebackup = false                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 vim.opt.wildmode = 'longest:full,full' -- command-line completion mode
 
--- FIXME: this is causing issues with other plugins with a double border
--- https://github.com/nvim-telescope/telescope.nvim/issues/3436
--- vim.opt.winborder = 'rounded' -- rounded window borders
+vim.opt.winborder = 'rounded' -- rounded window borders
 
 vim.opt.wrap = true -- display lines as one long line
 
