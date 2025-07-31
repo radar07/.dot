@@ -79,6 +79,7 @@
 
     # programming
     cargo
+    lua54Packages.luarocks
     nodePackages_latest.nodejs
     python3
     go

@@ -18,6 +18,7 @@
       "${PNPM_HOME}"
       "$HOME/.zig"
       "$HOME/Code/zine/zig-out/bin"
+      "$HOME/.opencode/bin"
       "${GOBIN}"
     ];
   };

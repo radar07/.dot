@@ -183,7 +183,7 @@
           "$mod SHIFT, k, resizeactive, 0 -15"
           "$mod SHIFT, l, resizeactive, 15 0"
 
-          ", Print, exec, grimblast --notify copy area"
+          "$mod SHIFT, Print, exec, grimblast --notify copy area"
           "$mod, Print, exec, grimblast --notify copy active"
         ]
         ++ (builtins.concatLists (

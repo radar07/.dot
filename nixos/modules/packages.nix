@@ -18,8 +18,7 @@
     neovim
     helix
     openjdk21
-    jetbrains.idea-community
-    jetbrains.pycharm-community
+    # jetbrains.idea-community
     windsurf
     dbeaver-bin
     vscode

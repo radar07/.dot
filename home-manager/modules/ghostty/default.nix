@@ -16,7 +16,7 @@
 
     mouse-hide-while-typing = true
 
-    theme = tokyonight
+    theme = rose-pine-moon
 
     background-opacity = 0.9
     background-blur-radius = true
