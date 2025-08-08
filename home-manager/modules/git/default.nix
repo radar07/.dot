@@ -6,7 +6,7 @@
     userName = "Pranav RK";
     userEmail = "pranavrk7@gmail.com";
     signing = {
-      key = "37F03B878831C3FC";
+      key = "AE028221AB6BCAC3";
     };
 
     aliases = {

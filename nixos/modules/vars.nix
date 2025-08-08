@@ -11,11 +11,14 @@
     GOPATH = "$HOME/go";
     GOBIN = "$HOME/go/bin";
 
+    BUN_HOME = "$HOME/.cache/.bun/bin";
+
     PNPM_HOME = "$HOME/.local/share/pnpm";
 
     PATH = [
       "${XDG_BIN_HOME}"
       "${PNPM_HOME}"
+      "${BUN_HOME}"
       "$HOME/.zig"
       "$HOME/Code/zine/zig-out/bin"
       "$HOME/.opencode/bin"
