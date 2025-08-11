@@ -22,6 +22,7 @@
       "$HOME/.zig"
       "$HOME/Code/zine/zig-out/bin"
       "$HOME/.opencode/bin"
+      "$HOME/.cargo/bin"
       "${GOBIN}"
     ];
   };
