@@ -124,24 +124,12 @@ return {
       on_attach = on_attach,
     }
 
-    -- astro language server
-    lspconfig['astro'].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-    }
-
     -- svelte language server
     lspconfig['svelte'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
       cmd = { 'svelteserver', '--stdio' },
       filetypes = { 'svelte' },
-    }
-
-    -- tailwindcss server
-    lspconfig['tailwindcss'].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
     }
 
     -- python server
@@ -154,38 +142,6 @@ return {
     lspconfig['clangd'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-    }
-
-    -- bash server
-    lspconfig['bashls'].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-    }
-
-    -- ruby server
-    lspconfig['ruby_lsp'].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-    }
-
-    -- rust analyzer
-    lspconfig['rust_analyzer'].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      cmd = { 'rustup', 'run', 'stable', 'rust-analyzer' },
-      settings = {
-        ['rust-analyzer'] = {
-          diagnostics = {
-            enable = true,
-          },
-          lens = {
-            enable = true,
-          },
-          checkOnSave = {
-            command = 'clippy',
-          },
-        },
-      },
     }
   end,
 }

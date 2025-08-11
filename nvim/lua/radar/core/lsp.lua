@@ -1,5 +1,5 @@
 -- Enable LSP
-vim.lsp.enable { 'gopls', 'lua_ls', 'zls' }
+vim.lsp.enable { 'gopls', 'lua_ls', 'zls', 'rust_analyzer' }
 
 vim.diagnostic.config {
   -- Use the default configuration
@@ -8,6 +8,6 @@ vim.diagnostic.config {
   -- Alternatively, customize specific options
   virtual_lines = {
     -- Only show virtual line diagnostics for the current cursor line
-    current_line = true,
+    -- current_line = true,
   },
 }
