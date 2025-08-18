@@ -18,10 +18,10 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = "~/Pictures/Wallpapers/japanese-temple.jpeg";
+      preload = "~/Pictures/Wallpapers/japanese-street-pixel-art.png";
       wallpaper = [
-        "eDP-1, ~/Pictures/Wallpapers/japanese-temple.jpeg"
-        "HDMI-A-1, ~/Pictures/Wallpapers/japanese-temple.jpeg"
+        "eDP-1, ~/Pictures/Wallpapers/japanese-street-pixel-art.png"
+        "HDMI-A-1, ~/Pictures/Wallpapers/japanese-street-pixel-art.png"
       ];
     };
   };
@@ -113,7 +113,7 @@
         gaps_in = 2;
         gaps_out = 2;
         border_size = 2;
-        "col.active_border" = "rgba(cba6f7ff)";
+        "col.active_border" = "rgba(5277c3ff)";
         "col.inactive_border" = "rgba(ffffff00)";
         resize_on_border = false;
         allow_tearing = false;
@@ -157,47 +157,46 @@
         sensitivity = 0.7; # -1.0 - 1.0, 0 means no modification.
       };
 
-      bind =
-        [
-          "$mod, RETURN, exec, $terminal"
-          "$mod, M, exec, $fileManager"
-          "$mod, W, exec, $browser"
-          "$mod, SPACE, exec, $menu"
-          "$mod, ESCAPE, exec, hyprlock"
-          "$mod, Q, killactive,"
-          "$mod SHIFT, Q, exit,"
-          "$mod, V, togglefloating,"
-          "$mod, P, pseudo"
-          "$mod, T, togglesplit"
-          "$mod, F, fullscreen, 0"
-          "$mod SHIFT, B, exec, ~/.config/hypr/scripts/reload-waybar.sh" # Reload Waybar
-          "$mod SHIFT, W, exec, ~/.config/hypr/scripts/reload-hyprpaper.sh" # Reload hyprpaper after a changing the wallpaper
+      bind = [
+        "$mod, RETURN, exec, $terminal"
+        "$mod, M, exec, $fileManager"
+        "$mod, W, exec, $browser"
+        "$mod, SPACE, exec, $menu"
+        "$mod, ESCAPE, exec, hyprlock"
+        "$mod, Q, killactive,"
+        "$mod SHIFT, Q, exit,"
+        "$mod, V, togglefloating,"
+        "$mod, P, pseudo"
+        "$mod, T, togglesplit"
+        "$mod, F, fullscreen, 0"
+        "$mod SHIFT, B, exec, ~/.config/hypr/scripts/reload-waybar.sh" # Reload Waybar
+        "$mod SHIFT, W, exec, ~/.config/hypr/scripts/reload-hyprpaper.sh" # Reload hyprpaper after a changing the wallpaper
 
-          "$mod, h, movefocus, l"
-          "$mod, l, movefocus, r"
-          "$mod, k, movefocus, u"
-          "$mod, j, movefocus, d"
+        "$mod, h, movefocus, l"
+        "$mod, l, movefocus, r"
+        "$mod, k, movefocus, u"
+        "$mod, j, movefocus, d"
 
-          "$mod SHIFT, h, resizeactive, -15 0"
-          "$mod SHIFT, j, resizeactive, 0 15"
-          "$mod SHIFT, k, resizeactive, 0 -15"
-          "$mod SHIFT, l, resizeactive, 15 0"
+        "$mod SHIFT, h, resizeactive, -15 0"
+        "$mod SHIFT, j, resizeactive, 0 15"
+        "$mod SHIFT, k, resizeactive, 0 -15"
+        "$mod SHIFT, l, resizeactive, 15 0"
 
-          "$mod SHIFT, Print, exec, grimblast --notify copy area"
-          "$mod, Print, exec, grimblast --notify copy active"
-        ]
-        ++ (builtins.concatLists (
-          builtins.genList (
-            i:
-            let
-              ws = i + 1;
-            in
-            [
-              "$mod, code:1${toString i}, workspace, ${toString ws}"
-              "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-            ]
-          ) 9
-        ));
+        "$mod SHIFT, Print, exec, grimblast --notify copy area"
+        "$mod, Print, exec, grimblast --notify copy active"
+      ]
+      ++ (builtins.concatLists (
+        builtins.genList (
+          i:
+          let
+            ws = i + 1;
+          in
+          [
+            "$mod, code:1${toString i}, workspace, ${toString ws}"
+            "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+          ]
+        ) 9
+      ));
 
       bindm = [
         "$mod, mouse:272, movewindow"
