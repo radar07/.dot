@@ -20,6 +20,7 @@
       "${PNPM_HOME}"
       "${BUN_HOME}"
       "$HOME/.zig"
+      "$HOME/.zls"
       "$HOME/Code/zine/zig-out/bin"
       "$HOME/.opencode/bin"
       "$HOME/.cargo/bin"

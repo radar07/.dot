@@ -18,7 +18,7 @@
 
     theme = rose-pine-moon
 
-    background-opacity = 0.9
+    background-opacity = 0.95
     background-blur-radius = true
 
     window-padding-y = 2,0

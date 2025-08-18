@@ -5,16 +5,16 @@ return {
     'hrsh7th/cmp-nvim-lsp',
   },
   opts = {
-    diagnostics = {
-      underline = true,
-      update_in_insert = false,
-      virtual_text = {
-        spacing = 4,
-        source = 'if_many',
-        prefix = 'icons',
-      },
-      severity_sort = true,
-    },
+    -- diagnostics = {
+    --   underline = true,
+    --   update_in_insert = false,
+    --   virtual_text = {
+    --     spacing = 4,
+    --     source = 'if_many',
+    --     prefix = 'icons',
+    --   },
+    --   severity_sort = true,
+    -- },
   },
   config = function()
     local lspconfig = require 'lspconfig'
@@ -134,12 +134,6 @@ return {
 
     -- python server
     lspconfig['pyright'].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-    }
-
-    -- c/c++ server
-    lspconfig['clangd'].setup {
       capabilities = capabilities,
       on_attach = on_attach,
     }

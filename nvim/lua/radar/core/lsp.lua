@@ -1,5 +1,7 @@
 -- Enable LSP
-vim.lsp.enable { 'gopls', 'lua_ls', 'zls', 'rust_analyzer' }
+vim.lsp.enable { 'clangd', 'gopls', 'lua_ls', 'rust_analyzer', 'zls' }
+
+vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { buffer = bufnr, desc = 'Goto Definition' })
 
 vim.diagnostic.config {
   -- Use the default configuration

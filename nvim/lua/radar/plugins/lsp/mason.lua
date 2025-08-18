@@ -33,7 +33,6 @@ return {
         'jsonls',
         'gopls',
         'rust_analyzer',
-        'zls',
       },
       automatic_installation = true, -- not the same as ensure_installed
     }
