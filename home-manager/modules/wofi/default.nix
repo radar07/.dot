@@ -15,14 +15,14 @@
     };
     style = ''
       * {
-        font-family: "FiraCode Nerd Font", monospace;
+        font-family: "JetbrainsMono Nerd Font", monospace;
         font-size: 16px;
       }
 
       window {
         margin: 0px;
         border: 1px solid #626880;
-        background-color: #303446;
+        background-color: #232136;
       }
 
       #input {
@@ -30,21 +30,21 @@
         border: 1px #626880;
         border-style: solid;
         border-radius: 10px;
-        background-color: #303446;
+        background-color: #232136;
         color: #c6d0f5;
-        outline-color: #303446;
+        outline-color: #232136;
       }
 
       #inner-box {
         margin: 5px;
         border: none;
-        background-color: #303446;
+        background-color: #232136;
       }
 
       #outer-box {
         margin: 5px;
         border: none;
-        background-color: #303446;
+        background-color: #232136;
       }
 
       #scroll {
@@ -54,7 +54,7 @@
       #text {
         padding: 4px;
         border: none;
-        color: #c6d0f5;
+        color: #e0def4;
       }
 
       #entry:nth-child(even){
