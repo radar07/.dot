@@ -16,7 +16,7 @@
 
     mouse-hide-while-typing = true
 
-    theme = rose-pine-moon
+    theme = kanagawabones
 
     background-opacity = 0.95
     background-blur-radius = true

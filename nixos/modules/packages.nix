@@ -27,7 +27,6 @@
     networkmanager
     blueman
     libnotify
-    manga-tui
     lxappearance
     gcc
     gnumake
