@@ -16,7 +16,7 @@
 
     mouse-hide-while-typing = true
 
-    theme = kanagawabones
+    theme = Kanagawabones
 
     background-opacity = 0.95
     background-blur-radius = true

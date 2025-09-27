@@ -144,10 +144,6 @@
 
       binds = { };
 
-      gestures = {
-        workspace_swipe = false;
-      };
-
       input = {
         kb_layout = "us";
         # follow_mouse = 1;
