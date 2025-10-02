@@ -18,10 +18,10 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = "~/Pictures/Wallpapers/japanese-street-pixel-art.png";
+      preload = "~/Pictures/Wallpapers/nixos-dark-rainbow.png";
       wallpaper = [
-        "eDP-1, ~/Pictures/Wallpapers/japanese-street-pixel-art.png"
-        "HDMI-A-1, ~/Pictures/Wallpapers/japanese-street-pixel-art.png"
+        "eDP-1, ~/Pictures/Wallpapers/nixos-dark-rainbow.png"
+        "HDMI-A-1, ~/Pictures/Wallpapers/nixos-dark-rainbow.png"
       ];
     };
   };

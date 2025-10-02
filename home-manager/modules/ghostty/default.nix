@@ -7,7 +7,7 @@
 
   xdg.configFile."ghostty/config".text = ''
     # Fonts
-    # font-family = "Iosevka Nerd Font"
+    # font-family = "FiraCode Nerd Font"
 
     font-size = 14
 

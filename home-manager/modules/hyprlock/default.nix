@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       background = {
-        path = "~/Pictures/Wallpapers/little-town.png";
+        path = "~/Pictures/Wallpapers/nixos-dark-blue.png";
         blur_passes = 3;
         contrast = 0.8916;
         brightness = 0.8172;
