@@ -9,9 +9,7 @@ return {
       lens = {
         enable = true,
       },
-      checkOnSave = {
-        command = 'clippy',
-      },
+      checkOnSave = true,
       files = {
         excludeDirs = {
           '.direnv',
