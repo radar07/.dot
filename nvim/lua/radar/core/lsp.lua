@@ -1,5 +1,5 @@
 -- Enable LSP
-vim.lsp.enable { 'clangd', 'gopls', 'lua_ls', 'rust_analyzer', 'zls' }
+vim.lsp.enable { 'clangd', 'gopls', 'lua_ls', 'rust_analyzer', 'ts_ls', 'zls' }
 
 vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', { desc = 'Goto Declaration' })
 -- vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Goto Definition' })

@@ -1,5 +1,6 @@
 return {
   cmd = { 'rustup', 'run', 'stable', 'rust-analyzer' },
+  filetypes = { 'rust' },
   settings = {
     ['rust-analyzer'] = {
       diagnostics = {
@@ -10,6 +11,19 @@ return {
       },
       checkOnSave = {
         command = 'clippy',
+      },
+      files = {
+        excludeDirs = {
+          '.direnv',
+          '.git',
+          '.github',
+          '.gitlab',
+          'bin',
+          'node_modules',
+          'target',
+          'venv',
+          '.venv',
+        },
       },
     },
   },

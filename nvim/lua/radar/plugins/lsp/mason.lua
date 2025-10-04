@@ -26,11 +26,7 @@ return {
 
     mason_lspconfig.setup {
       ensure_installed = {
-        'cssls',
-        'html',
         'ts_ls',
-        'pyright',
-        'jsonls',
         'gopls',
         'rust_analyzer',
       },
