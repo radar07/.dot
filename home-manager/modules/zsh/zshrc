@@ -26,10 +26,13 @@ zle -N down-line-or-beginning-search
 # Colors
 autoload -Uz colors && colors
 
-# FIXME - Make key-bindings work
+# Magical shell history
+eval "$(atuin init zsh)"
+
 bindkey -s '^o' 'yazi^M'
 bindkey "^k" up-line-or-beginning-search # Up
 bindkey "^j" down-line-or-beginning-search # Down
+
 
 #  __      ___                                 _
 #  \ \    / (_)                               | |

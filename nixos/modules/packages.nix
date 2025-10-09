@@ -18,7 +18,8 @@
     neovim
     helix
     openjdk21
-    # jetbrains.idea-community
+    jetbrains.idea-community
+    jetbrains.pycharm-community
     dbeaver-bin
     vscode
     vscodium

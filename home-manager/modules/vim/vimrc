@@ -38,9 +38,7 @@ set shortmess+=c
 set list
 set listchars=tab:→\ ,extends:›,precedes:‹,nbsp:·,trail:␣,eol:¬
 
-set background=dark
-let g:gruvbox_contrast_dark = "hard"
-colorscheme gruvbox
+colorscheme habamax
 
 hi Normal guibg=NONE ctermbg=NONE
 hi Comment cterm=italic gui=italic

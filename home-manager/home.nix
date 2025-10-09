@@ -42,6 +42,7 @@
     tldr
     ijq
     asdf-vm
+    atuin
     jujutsu
 
     btop
