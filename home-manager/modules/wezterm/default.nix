@@ -12,7 +12,7 @@
         config = wezterm.config_builder()
       end
 
-      config.color_scheme = "Catppuccin Mocha"
+      config.color_scheme = "kanagawabones"
 
       config.font_size = 14
       config.font = wezterm.font_with_fallback({

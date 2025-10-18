@@ -7,7 +7,12 @@
 
     font-size = 14
 
-    font-variation = wght=450
+    # font-feature=zero
+    # font-feature=cv02
+    # font-feature=ss02
+    # font-feature=ss03
+    # font-feature=ss05
+
     window-inherit-font-size = true
 
     mouse-hide-while-typing = true
