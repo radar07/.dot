@@ -21,6 +21,7 @@
     jetbrains.idea-community
     jetbrains.pycharm-community
     dbeaver-bin
+    shotcut
     vscode
     vscodium
     pnpm
