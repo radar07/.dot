@@ -26,9 +26,6 @@ zle -N down-line-or-beginning-search
 # Colors
 autoload -Uz colors && colors
 
-# Magical shell history
-eval "$(atuin init zsh)"
-
 bindkey -s '^o' 'yazi^M'
 bindkey "^k" up-line-or-beginning-search # Up
 bindkey "^j" down-line-or-beginning-search # Down

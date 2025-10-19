@@ -25,6 +25,7 @@
     zoxide
     yazi
     ani-cli
+    pastel
     hugo
     zola
     tre-command
@@ -42,7 +43,6 @@
     tldr
     ijq
     asdf-vm
-    atuin
     jujutsu
 
     btop
