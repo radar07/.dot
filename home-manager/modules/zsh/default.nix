@@ -44,6 +44,9 @@
       # lazygit
       lg = "lazygit";
 
+      # lazyjj
+      lj = "lazyjj";
+
       # cd for directory jumping
       cd = "z";
 

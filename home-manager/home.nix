@@ -49,6 +49,7 @@
     htop
 
     lazygit
+    lazyjj
 
     qbittorrent
 
