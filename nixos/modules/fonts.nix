@@ -3,7 +3,7 @@
 {
   fonts.packages = with pkgs; [
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     nerd-fonts.fira-code
     nerd-fonts.iosevka
     nerd-fonts.jetbrains-mono

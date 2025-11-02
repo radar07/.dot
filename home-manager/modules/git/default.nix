@@ -9,16 +9,18 @@
       key = "AE028221AB6BCAC3";
     };
 
-    aliases = {
-      st = "status";
-      br = "branch";
-      co = "checkout";
-      ci = "commit";
-      cm = "commit -m";
-      ca = "commit --amend";
-      ssb = "status -sb";
-      d = "diff";
-      dt = "difftool";
+    settings = {
+      aliases = {
+        st = "status";
+        br = "branch";
+        co = "checkout";
+        ci = "commit";
+        cm = "commit -m";
+        ca = "commit --amend";
+        ssb = "status -sb";
+        d = "diff";
+        dt = "difftool";
+      };
     };
 
     extraConfig = {
