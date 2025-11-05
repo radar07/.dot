@@ -1,4 +1,12 @@
--- Enable LSP
+-- -- Load and configure individual LSP server settings
+-- vim.lsp.config('clangd', dofile(vim.fn.stdpath 'config' .. '/lsp/clangd.lua'))
+-- vim.lsp.config('gopls', dofile(vim.fn.stdpath 'config' .. '/lsp/gopls.lua'))
+-- vim.lsp.config('lua_ls', dofile(vim.fn.stdpath 'config' .. '/lsp/lua_ls.lua'))
+-- vim.lsp.config('rust_analyzer', dofile(vim.fn.stdpath 'config' .. '/lsp/rust_analyzer.lua'))
+-- vim.lsp.config('ts_ls', dofile(vim.fn.stdpath 'config' .. '/lsp/ts_ls.lua'))
+-- vim.lsp.config('zls', dofile(vim.fn.stdpath 'config' .. '/lsp/zls.lua'))
+
+-- Enable the configured LSP servers
 vim.lsp.enable { 'clangd', 'gopls', 'lua_ls', 'rust_analyzer', 'ts_ls', 'zls' }
 
 vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', { desc = 'Goto Declaration' })
@@ -28,8 +36,6 @@ vim.keymap.set(
 )
 
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Goto Definition' })
-
-vim.lsp.config('*', {})
 
 local x = vim.diagnostic.severity
 vim.diagnostic.config {
