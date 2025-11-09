@@ -3,13 +3,15 @@
 {
   programs.git = {
     enable = true;
-    userName = "Pranav RK";
-    userEmail = "pranavrk7@gmail.com";
     signing = {
       key = "AE028221AB6BCAC3";
     };
 
     settings = {
+      user = {
+        name = "Pranav RK";
+        email = "pranavrk7@gmail.com";
+      };
       aliases = {
         st = "status";
         br = "branch";

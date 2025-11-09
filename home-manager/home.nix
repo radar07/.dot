@@ -86,6 +86,13 @@
     python3
     go
     gcc
+    (lua.withPackages (
+      ps: with ps; [
+        busted
+        luafilesystem
+      ]
+    ))
+    love
     tree-sitter
     terraform
     uv

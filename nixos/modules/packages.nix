@@ -10,6 +10,13 @@
     spotify
     clang
     clang-tools
+    (lua.withPackages (
+      ps: with ps; [
+        busted
+        luafilesystem
+      ]
+    ))
+    love
     rustup
     git
     gh
