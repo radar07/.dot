@@ -29,6 +29,7 @@
     jetbrains.pycharm-community
     dbeaver-bin
     shotcut
+    meld
     vscode
     vscodium
     pnpm
