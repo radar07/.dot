@@ -112,7 +112,7 @@
       general = {
         gaps_in = 0;
         gaps_out = 0;
-        border_size = 2;
+        border_size = 1;
         "col.active_border" = "rgba(5277c3ff)";
         "col.inactive_border" = "rgba(ffffff00)";
         resize_on_border = false;

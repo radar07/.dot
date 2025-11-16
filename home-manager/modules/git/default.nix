@@ -23,9 +23,6 @@
         d = "diff";
         dt = "difftool";
       };
-    };
-
-    extraConfig = {
       core = {
         editor = "nvim";
         diff = "auto";
