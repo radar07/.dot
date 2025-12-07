@@ -44,6 +44,7 @@
     ijq
     asdf-vm
     jujutsu
+    manga-tui
 
     btop
     htop
@@ -52,6 +53,7 @@
     lazyjj
 
     qbittorrent
+    quickshell
 
     # containers
     podman
