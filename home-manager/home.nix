@@ -73,7 +73,7 @@
 
     # applications
     alacritty
-    vesktop
+    discord
     obsidian
     obs-studio
     vlc
