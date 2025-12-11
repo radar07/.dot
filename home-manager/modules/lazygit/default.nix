@@ -7,9 +7,11 @@
         showIcons = true;
       };
       git = {
-        paging = {
-          pager = "delta --dark --paging=never";
-        };
+        pagers = [
+          {
+            pager = "delta --dark --paging=never";
+          }
+        ];
       };
     };
   };
