@@ -18,6 +18,8 @@
     ))
     love
     rustup
+    godot_4
+    godot_4-export-templates-bin
     git
     gh
     lazygit
