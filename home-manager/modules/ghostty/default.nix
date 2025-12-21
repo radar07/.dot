@@ -3,7 +3,7 @@
 {
   xdg.configFile."ghostty/config".text = ''
     # Fonts
-    # font-family = "FiraCode Nerd Font"
+    font-family = "UbuntuMono Nerd Font"
 
     font-size = 14
 

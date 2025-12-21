@@ -130,9 +130,9 @@
         };
       };
 
-      windowrule = [
-        "float, class:blueman-manager, title:blueman-manager"
-      ];
+      # windowrule = [
+      #   "float, class:blueman-manager, title:blueman-manager"
+      # ];
 
       master = {
         new_status = "master";
