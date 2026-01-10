@@ -27,8 +27,8 @@
     neovim
     helix
     openjdk21
-    jetbrains.idea-community
-    jetbrains.pycharm-community
+    jetbrains.idea-oss
+    jetbrains.pycharm-oss
     dbeaver-bin
     shotcut
     meld
@@ -51,6 +51,6 @@
     zoxide
     tmux
     nixd
-    nixfmt-rfc-style
+    nixfmt
   ];
 }

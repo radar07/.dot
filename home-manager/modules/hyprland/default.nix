@@ -20,8 +20,8 @@
     settings = {
       preload = "~/Pictures/Wallpapers/nixos-dark-rainbow.png";
       wallpaper = [
-        "eDP-1, ~/Pictures/Wallpapers/nixos-dark-rainbow.png"
-        "HDMI-A-1, ~/Pictures/Wallpapers/nixos-dark-rainbow.png"
+        "eDP-1, ~/Pictures/Wallpapers/japanese-temple.jpeg"
+        "HDMI-A-1, ~/Pictures/Wallpapers/japanese-temple.jpeg"
       ];
     };
   };
