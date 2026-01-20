@@ -18,8 +18,8 @@
     ))
     love
     rustup
-    godot_4
-    godot_4-export-templates-bin
+    # godot_4
+    # godot_4-export-templates-bin
     git
     gh
     lazygit
@@ -28,7 +28,7 @@
     helix
     openjdk21
     jetbrains.idea-oss
-    jetbrains.pycharm-oss
+    # jetbrains.pycharm-oss
     dbeaver-bin
     shotcut
     meld
