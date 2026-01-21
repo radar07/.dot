@@ -79,33 +79,45 @@
       # "$terminal" = "ghostty";
       # "$terminal" = "alacritty";
       "$terminal" = "wezterm";
-      "$fileManager" = "nautilus";
+      "$fileManager" = "pcmanfm";
       # "$browser" = "firefox";
       "$browser" = "zen";
 
       env = [
+        # Cursor settings - match home-manager config
         "XCURSOR_SIZE,16"
-        "XCURSOR_THEME,Adwaita"
+        "XCURSOR_THEME,Catppuccin-Mocha-Dark-Cursors"
         "HYPRCURSOR_SIZE,16"
-        "HYPRCURSOR_THEME,Adwaita"
+        "HYPRCURSOR_THEME,Catppuccin-Mocha-Dark-Cursors"
 
+        # GTK settings
+        "GTK_THEME,adw-gtk3-dark"
+
+        # Wayland/Browser settings
         "NIXOS_OZONE_WL,1"
         "MOZ_ENABLE_WAYLAND,1"
         "WLR_NO_HARDWARE_CURSORS,1"
 
+        # Session settings
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
-        "XDG_SESSION_DESKTOP,Hyprland"
+        "XDG_CURRENT_DESKTOP,Hyprland"
 
+        # Chromium/Electron apps
         "OZONE_PLATFORM,Hyprland"
 
+        # Qt settings
         "QT_QPA_PLATFORM,wayland;xcb"
-        "QT_QPA_PLATFORMTHEME,qt6ct"
+        "QT_QPA_PLATFORMTHEME,adwaita"
+        "QT_STYLE_OVERRIDE,adwaita-dark"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
       ];
 
       exec-once = [
+        "dbus-update-activation-environment --systemd --all"
+        "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
         "waybar"
         "hypridle"
       ];

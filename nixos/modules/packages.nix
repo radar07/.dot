@@ -10,13 +10,6 @@
     spotify
     clang
     clang-tools
-    (lua.withPackages (
-      ps: with ps; [
-        busted
-        luafilesystem
-      ]
-    ))
-    love
     rustup
     # godot_4
     # godot_4-export-templates-bin
@@ -37,6 +30,8 @@
     pnpm
     deno
     networkmanager
+    pcmanfm
+    pavucontrol
     blueman
     libnotify
     lxappearance

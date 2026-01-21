@@ -19,6 +19,14 @@
   home.homeDirectory = "/home/radar";
 
   home.packages = with pkgs; [
+    papirus-folders
+
+    adwaita-qt # Qt theme matching GTK Adwaita
+    adwaita-qt6 # Qt6 support
+    adwaita-icon-theme # Base icon theme (dependency)
+    libsForQt5.qtstyleplugin-kvantum # Optional: better Qt theming
+
+    gdb
     fastfetch
     gnupg
     gh
@@ -50,10 +58,8 @@
     htop
 
     lazygit
-    lazyjj
 
     qbittorrent
-    quickshell
 
     # containers
     podman
@@ -107,14 +113,45 @@
       package = pkgs.adw-gtk3;
     };
     iconTheme = {
-      name = "papirus-icon-theme";
+      name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
+    };
+    cursorTheme = {
+      name = "Catppuccin-Mocha-Dark-Cursors";
+      package = pkgs.catppuccin-cursors.mochaDark;
+    };
+    gtk3 = {
+      extraConfig.gtk-application-prefer-dark-theme = true;
+    };
+    gtk4 = {
+      extraConfig.gtk-application-prefer-dark-theme = true;
     };
   };
 
-  home.sessionVariables.GTK_THEME = "Adwaita-dark";
+  qt = {
+    enable = true;
+    platformTheme.name = "adwaita";
+    style.name = "adwaita-dark";
+  };
 
-  home.stateVersion = "24.11";
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    name = "Catppuccin-Mocha-Dark-Cursors";
+    package = pkgs.catppuccin-cursors.mochaDark;
+    size = 16;
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      gtk-theme = "adw-gtk3-dark";
+      color-scheme = "prefer-dark";
+    };
+  };
+
+  home.sessionVariables.GTK_THEME = "adw-gtk3-dark";
+
+  home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
 }

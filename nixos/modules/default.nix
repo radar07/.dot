@@ -7,6 +7,7 @@
     ./services.nix
     ./nix.nix
     ./packages.nix
+    ./portals.nix
     ./system.nix
     ./user.nix
     ./vars.nix
