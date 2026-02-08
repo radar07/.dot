@@ -7,7 +7,6 @@
         modules-left = [
           "custom/logo"
           "hyprland/workspaces"
-          "custom/scripts"
         ];
 
         modules-center = [
@@ -168,14 +167,6 @@
           icon-size = 20;
           spacing = 10;
           cursor = true;
-        };
-
-        "custom/scripts" = {
-          format = "{}";
-          exec = "$HOME/.dot/scripts/interview-countdown.sh";
-          interval = 3600;
-          tooltip-format = "Interview Preparation Countdown\nTarget: April 30, 2026";
-          on-click = "notify-send 'Interview Prep' 'Keep going! You got this! 💪'";
         };
       }
     ];

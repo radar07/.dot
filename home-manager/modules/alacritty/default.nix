@@ -52,19 +52,19 @@
       };
 
       font.bold = {
-        family = "JetbrainsMono Nerd Font";
+        family = "FiraCode Nerd Font";
       };
 
       font.bold_italic = {
-        family = "JetbrainsMono Nerd Font";
+        family = "FiraCode Nerd Font";
       };
 
       font.italic = {
-        family = "JetbrainsMono Nerd Font";
+        family = "FiraCode Nerd Font";
       };
 
       font.normal = {
-        family = "JetbrainsMono Nerd Font";
+        family = "FiraCode Nerd Font";
       };
 
       font.offset = {

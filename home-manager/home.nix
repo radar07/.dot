@@ -93,7 +93,6 @@
     nodePackages_latest.nodejs
     python3
     go
-    gcc
     (lua.withPackages (
       ps: with ps; [
         busted
@@ -116,10 +115,10 @@
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-    cursorTheme = {
-      name = "Catppuccin-Mocha-Dark-Cursors";
-      package = pkgs.catppuccin-cursors.mochaDark;
-    };
+    # cursorTheme = {
+    #   name = "Catppuccin-Mocha-Dark-Cursors";
+    #   package = pkgs.catppuccin-cursors.mochaDark;
+    # };
     gtk3 = {
       extraConfig.gtk-application-prefer-dark-theme = true;
     };

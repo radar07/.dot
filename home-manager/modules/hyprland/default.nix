@@ -86,9 +86,9 @@
       env = [
         # Cursor settings - match home-manager config
         "XCURSOR_SIZE,16"
-        "XCURSOR_THEME,Catppuccin-Mocha-Dark-Cursors"
+        "XCURSOR_THEME,Adwaita"
         "HYPRCURSOR_SIZE,16"
-        "HYPRCURSOR_THEME,Catppuccin-Mocha-Dark-Cursors"
+        "HYPRCURSOR_THEME,Adwaita"
 
         # GTK settings
         "GTK_THEME,adw-gtk3-dark"
