@@ -5,10 +5,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     ghostty.url = "github:ghostty-org/ghostty";
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -23,7 +19,6 @@
       ghostty,
       home-manager,
       zen-browser,
-      noctalia,
       ...
     }@inputs:
     let
@@ -50,7 +45,6 @@
               environment.systemPackages = [
                 zen-browser.packages.${pkgs.system}.default
                 ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
-                noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
               ];
             }
           )

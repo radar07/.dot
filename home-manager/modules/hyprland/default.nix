@@ -86,9 +86,9 @@
       env = [
         # Cursor settings - match home-manager config
         "XCURSOR_SIZE,16"
-        "XCURSOR_THEME,Adwaita"
+        "XCURSOR_THEME,catppuccin-mocha-dark-cursors"
         "HYPRCURSOR_SIZE,16"
-        "HYPRCURSOR_THEME,Adwaita"
+        "HYPRCURSOR_THEME,catppuccin-mocha-dark-cursors"
 
         # GTK settings
         "GTK_THEME,adw-gtk3-dark"
@@ -118,7 +118,6 @@
         "dbus-update-activation-environment --systemd --all"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
-        "waybar"
         "hypridle"
       ];
 
@@ -183,8 +182,8 @@
         "$mod, P, pseudo"
         "$mod, T, togglesplit"
         "$mod, F, fullscreen, 0"
-        "$mod SHIFT, B, exec, ~/.config/hypr/scripts/reload-waybar.sh" # Reload Waybar
-        "$mod SHIFT, W, exec, ~/.config/hypr/scripts/reload-hyprpaper.sh" # Reload hyprpaper after a changing the wallpaper
+        "$mod SHIFT, B, exec, /home/radar/.dot/scripts/reload-waybar.sh" # Reload Waybar
+        "$mod SHIFT, W, exec, /home/radar/.dot/scripts/reload-hyprpaper.sh" # Reload hyprpaper after a changing the wallpaper
 
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"

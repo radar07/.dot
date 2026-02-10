@@ -2,6 +2,12 @@
   programs.waybar = {
     enable = true;
 
+    # Add systemd integration
+    systemd = {
+      enable = true;
+      target = "hyprland-session.target";
+    };
+
     settings = [
       {
         modules-left = [
@@ -170,6 +176,7 @@
         };
       }
     ];
+
     style = ''
       * {
         font-family: "FiraCode Nerd Font";
