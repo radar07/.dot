@@ -130,7 +130,7 @@
       @define-color mauve_lighter #caa6f7;
 
       * {
-        font-family: "JetbrainsMono Nerd Font";
+        font-family: "UbuntuMono Nerd Font";
         font-size: 95%;
         background-clip: border-box;
       }

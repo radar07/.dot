@@ -1,12 +1,13 @@
 {
   imports = [
     ./alacritty
+    ./ashell
     ./bat
     ./btop
     ./fastfetch
     ./ghostty
     ./git
-    # ./helix
+    ./gpg
     ./hyprland
     ./hyprlock
     ./lazygit
@@ -16,7 +17,7 @@
     ./swaync
     ./tmux
     ./vim
-    ./waybar
+    # ./waybar
     ./wezterm
     ./wofi
     ./zathura

@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     ghostty.url = "github:ghostty-org/ghostty";
+    ashell.url = "github:MalpenZibo/ashell";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -19,6 +20,7 @@
       ghostty,
       home-manager,
       zen-browser,
+      ashell,
       ...
     }@inputs:
     let
@@ -45,6 +47,7 @@
               environment.systemPackages = [
                 zen-browser.packages.${pkgs.system}.default
                 ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
+                ashell.packages.${pkgs.system}.default
               ];
             }
           )

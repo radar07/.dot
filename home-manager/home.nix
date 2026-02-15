@@ -84,6 +84,9 @@
     obs-studio
     vlc
 
+    # comics reader
+    mcomix
+
     # password manager
     keepassxc
 
