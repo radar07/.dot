@@ -112,12 +112,20 @@
         "QT_STYLE_OVERRIDE,adwaita-dark"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+
+        # Input method (fcitx5) settings
+        "GTK_IM_MODULE,fcitx"
+        "QT_IM_MODULE,fcitx"
+        "XMODIFIERS,@im=fcitx"
+        "SDL_IM_MODULE,fcitx"
+        "GLFW_IM_MODULE,ibus"
       ];
 
       exec-once = [
         "dbus-update-activation-environment --systemd --all"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
+        "fcitx5 -d --replace" # Start fcitx5 input method
         "hypridle"
         "ashell"
       ];
@@ -198,6 +206,9 @@
 
         "$mod SHIFT, Print, exec, grimblast --notify copy area"
         "$mod, Print, exec, grimblast --notify copy active"
+
+        # Input method switching (fcitx5)
+        "$mod CTRL, SPACE, exec, fcitx5-remote -t" # Toggle between English and Japanese
       ]
       ++ (builtins.concatLists (
         builtins.genList (

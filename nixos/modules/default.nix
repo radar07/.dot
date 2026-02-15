@@ -3,6 +3,7 @@
     ./boot.nix
     ./fonts.nix
     ./gaming.nix
+    ./input-method.nix
     ./locale.nix
     ./services.nix
     ./nix.nix
