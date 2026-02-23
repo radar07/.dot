@@ -23,7 +23,7 @@
       -- FiraCode
       config.harfbuzz_features = { "zero", "cv02", "ss02", "ss03", "ss05" }
 
-      config.window_background_opacity = 0.95
+      -- config.window_background_opacity = 0.95
 
       config.warn_about_missing_glyphs = false
 

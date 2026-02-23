@@ -39,10 +39,10 @@
       CustomModule = [
         {
           name = "Notification";
-          icon = "";
+          icon = " ";
           command = "swaync-client -t -sw";
           listen_cmd = "swaync-client -swb";
-          icons.dnd = "";
+          icons.dnd = " ";
           alert = ".*notification";
         }
       ];

@@ -18,15 +18,15 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "/home/radar/Pictures/Wallpapers/nixos-dark-rainbow.png" ];
+      preload = [ "/home/radar/Pictures/Wallpapers/kokou-no-hito-1.png" ];
       wallpaper = [
         {
           monitor = "eDP-1";
-          path = "/home/radar/Pictures/Wallpapers/nixos-dark-rainbow.png";
+          path = "/home/radar/Pictures/Wallpapers/kokou-no-hito-1.png";
         }
         {
           monitor = "HDMI-A-1";
-          path = "/home/radar/Pictures/Wallpapers/nixos-dark-rainbow.png";
+          path = "/home/radar/Pictures/Wallpapers/kokou-no-hito-1.png";
         }
       ];
     };
