@@ -31,12 +31,26 @@
     pulse.enable = true;
   };
 
+  # Enable Blueman for Bluetooth management
+  services.blueman.enable = true;
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Enable = "Source, Sink, Media, Socket";
+        Experimental = true;
+      };
+    };
+  };
+
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Ollama
-  services.ollama = {
-    enable = true;
-  };
+  # services.ollama = {
+  #   enable = true;
+  # };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
