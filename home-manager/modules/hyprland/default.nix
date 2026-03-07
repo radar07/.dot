@@ -18,15 +18,15 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "/home/radar/Pictures/Wallpapers/kokou-no-hito-1.png" ];
+      preload = [ "/home/radar/Pictures/Wallpapers/key-switch-catppuccin.jpg" ];
       wallpaper = [
         {
           monitor = "eDP-1";
-          path = "/home/radar/Pictures/Wallpapers/kokou-no-hito-1.png";
+          path = "/home/radar/Pictures/Wallpapers/key-switch-catppuccin.jpg";
         }
         {
           monitor = "HDMI-A-1";
-          path = "/home/radar/Pictures/Wallpapers/kokou-no-hito-1.png";
+          path = "/home/radar/Pictures/Wallpapers/key-switch-catppuccin.jpg";
         }
       ];
     };
@@ -85,9 +85,9 @@
 
       env = [
         # Cursor settings - match home-manager config
-        "XCURSOR_SIZE,16"
+        "XCURSOR_SIZE,18"
         "XCURSOR_THEME,catppuccin-mocha-dark-cursors"
-        "HYPRCURSOR_SIZE,16"
+        "HYPRCURSOR_SIZE,18"
         "HYPRCURSOR_THEME,catppuccin-mocha-dark-cursors"
 
         # GTK settings
