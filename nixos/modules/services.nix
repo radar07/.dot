@@ -29,6 +29,8 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    jack.enable = true;
+    wireplumber.enable = true;
   };
 
   # Enable Blueman for Bluetooth management
@@ -41,6 +43,13 @@
       General = {
         Enable = "Source, Sink, Media, Socket";
         Experimental = true;
+      };
+      Policy = {
+        AutoEnable = true;
+      };
+      Input = {
+        LEAutoSecurity = true;
+        ClassicBondedOnly = false;
       };
     };
   };

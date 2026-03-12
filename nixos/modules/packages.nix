@@ -21,7 +21,7 @@
     helix
     openjdk21
     jetbrains.idea-oss
-    # jetbrains.pycharm-oss
+    jetbrains.pycharm-oss
     dbeaver-bin
     shotcut
     meld
@@ -33,6 +33,9 @@
     pcmanfm
     pavucontrol
     blueman
+    bluetooth_battery
+    solaar
+    usbutils
     libnotify
     lxappearance
     gcc

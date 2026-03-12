@@ -128,6 +128,8 @@
         "fcitx5 -d --replace" # Start fcitx5 input method
         "hypridle"
         "ashell"
+        "blueman-applet" # Bluetooth manager applet for pairing
+        "solaar -w hide" # Logitech device manager (starts minimized)
       ];
 
       monitor = [
