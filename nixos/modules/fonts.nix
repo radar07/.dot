@@ -9,7 +9,7 @@
     nerd-fonts.fira-code
     nerd-fonts.iosevka
     nerd-fonts.jetbrains-mono
-    nerd-fonts.mononoki
     nerd-fonts.ubuntu-mono
+    nerd-fonts.zed-mono
   ];
 }
