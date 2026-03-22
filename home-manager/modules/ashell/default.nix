@@ -40,7 +40,7 @@
         {
           name = "Notification";
           icon = " ";
-          command = "swaync-client -t -sw";
+          command = "swaync-client -t";
           listen_cmd = "swaync-client -swb";
           icons.dnd = " ";
           alert = ".*notification";

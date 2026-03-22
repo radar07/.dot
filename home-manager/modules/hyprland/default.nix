@@ -81,7 +81,7 @@
       "$terminal" = "wezterm";
       "$fileManager" = "pcmanfm";
       # "$browser" = "firefox";
-      "$browser" = "zen";
+      "$browser" = "zen-beta";
 
       env = [
         # Cursor settings - match home-manager config
