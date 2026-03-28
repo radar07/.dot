@@ -7,7 +7,7 @@
 -- vim.lsp.config('zls', dofile(vim.fn.stdpath 'config' .. '/lsp/zls.lua'))
 
 -- Enable the configured LSP servers
-vim.lsp.enable { 'clangd', 'gopls', 'lua_ls', 'rust_analyzer', 'ts_ls', 'zls' }
+vim.lsp.enable { 'clangd', 'gopls', 'lua_ls', 'pyright', 'rust_analyzer', 'ts_ls', 'zls' }
 
 vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', { desc = 'Goto Declaration' })
 -- vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Goto Definition' })
@@ -47,7 +47,7 @@ vim.diagnostic.config {
   -- Alternatively, customize specific options
   virtual_lines = {
     -- Only show virtual line diagnostics for the current cursor line
-    -- current_line = true,
+    current_line = true,
   },
   signs = { text = { [x.ERROR] = ' ', [x.WARN] = ' ', [x.HINT] = ' ', [x.INFO] = ' ' } },
   underline = true,

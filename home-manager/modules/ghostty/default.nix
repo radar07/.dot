@@ -17,7 +17,7 @@
 
     mouse-hide-while-typing = true
 
-    theme = Kanagawabones
+    theme = Gruvbox Dark Hard
 
     background-opacity = 0.95
     background-blur-radius = true
@@ -42,11 +42,11 @@
     keybind = super+shift+m=toggle_split_zoom
 
     ## Splits
-    # keybind = ctrl+h=goto_split:left
-    # keybind = ctrl+j=goto_split:bottom
-    # keybind = ctrl+k=goto_split:top
-    # keybind = ctrl+l=goto_split:right
-    # keybind = ctrl+shift+enter=new_split:auto
+    keybind = ctrl+h=goto_split:left
+    keybind = ctrl+j=goto_split:bottom
+    keybind = ctrl+k=goto_split:top
+    keybind = ctrl+l=goto_split:right
+    keybind = ctrl+shift+enter=new_split:auto
 
     ## Clipboard
     keybind = ctrl+shift+c=copy_to_clipboard

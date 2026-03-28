@@ -35,11 +35,11 @@ return {
         'clangd',
         'zls',
         -- Formatters and linters
-        'prettier', -- prettier formatter
-        'eslint_d', -- js linter
-        'isort',
-        'black',
-        'pylint',
+        -- 'prettier', -- prettier formatter
+        -- 'eslint_d', -- js linter
+        -- 'isort',
+        -- 'black',
+        -- 'pylint',
       },
     }
   end,

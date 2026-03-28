@@ -32,7 +32,7 @@
     gh
     zoxide
     yazi
-    ani-cli
+    # ani-cli
     pastel
     hugo
     zola

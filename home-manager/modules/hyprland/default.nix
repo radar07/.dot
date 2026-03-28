@@ -18,15 +18,15 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "/home/radar/Pictures/Wallpapers/key-switch-catppuccin.jpg" ];
+      preload = [ "/home/radar/Pictures/Wallpapers/nixos-dark-rainbow.png" ];
       wallpaper = [
         {
           monitor = "eDP-1";
-          path = "/home/radar/Pictures/Wallpapers/key-switch-catppuccin.jpg";
+          path = "/home/radar/Pictures/Wallpapers/nixos-dark-rainbow.png";
         }
         {
           monitor = "HDMI-A-1";
-          path = "/home/radar/Pictures/Wallpapers/key-switch-catppuccin.jpg";
+          path = "/home/radar/Pictures/Wallpapers/nixos-dark-rainbow.png";
         }
       ];
     };
@@ -76,9 +76,9 @@
     settings = {
       "$mod" = "SUPER";
       "$menu" = "wofi drun";
-      # "$terminal" = "ghostty";
+      "$terminal" = "ghostty";
       # "$terminal" = "alacritty";
-      "$terminal" = "wezterm";
+      # "$terminal" = "wezterm";
       "$fileManager" = "pcmanfm";
       # "$browser" = "firefox";
       "$browser" = "zen-beta";
