@@ -33,10 +33,10 @@
     zoxide
     yazi
     # ani-cli
-    pastel
-    hugo
-    zola
     tre-command
+
+    # open-source postman alternative
+    bruno
 
     # archives
     unzip
@@ -52,7 +52,6 @@
     ijq
     asdf-vm
     jujutsu
-    manga-tui
 
     btop
     htop
@@ -79,7 +78,6 @@
 
     # applications
     alacritty
-    # discord
     vesktop
     obsidian
     obs-studio
@@ -103,7 +101,6 @@
         luafilesystem
       ]
     ))
-    love
     tree-sitter
     terraform
     uv
