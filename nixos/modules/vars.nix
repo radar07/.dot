@@ -24,6 +24,7 @@
       "$HOME/Code/zine/zig-out/bin"
       "$HOME/.opencode/bin"
       "$HOME/.cargo/bin"
+      "$HOME/.flutter/flutter/bin:$PATH"
       "${GOBIN}"
     ];
   };

@@ -26,6 +26,9 @@
     adwaita-icon-theme # Base icon theme (dependency)
     libsForQt5.qtstyleplugin-kvantum # Optional: better Qt theming
 
+    # alternate browser
+    chromium
+
     gdb
     fastfetch
     gnupg
@@ -58,6 +61,7 @@
 
     lazygit
 
+    # torrent client
     qbittorrent
 
     # containers
