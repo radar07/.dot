@@ -35,11 +35,13 @@
     gh
     zoxide
     yazi
-    # ani-cli
     tre-command
 
     # open-source postman alternative
     bruno
+
+    # lightroom alternative
+    darktable
 
     # archives
     unzip
