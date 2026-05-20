@@ -17,7 +17,7 @@
 
     mouse-hide-while-typing = true
 
-    theme = Gruvbox Dark Hard
+    # theme = Gruvbox Dark Hard
 
     background-opacity = 0.95
     background-blur-radius = true

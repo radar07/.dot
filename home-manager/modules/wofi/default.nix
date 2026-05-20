@@ -15,7 +15,7 @@
     };
     style = ''
       * {
-        font-family: "FiraCode Nerd Font", monospace;
+        font-family: "JetbrainsMono Nerd Font", monospace;
         font-size: 16px;
       }
 
