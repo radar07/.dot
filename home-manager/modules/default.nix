@@ -1,7 +1,6 @@
 {
   imports = [
     ./alacritty
-    ./ashell
     ./bat
     ./btop
     ./fastfetch
@@ -18,7 +17,6 @@
     ./swaync
     ./tmux
     ./vim
-    # ./waybar
     ./wezterm
     ./wofi
     ./zathura
