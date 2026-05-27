@@ -13,6 +13,7 @@
     ./lazygit
     ./mpv
     ./neovim
+    ./noctalia
     ./starship
     ./swaync
     ./tmux

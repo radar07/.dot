@@ -125,11 +125,9 @@
         "dbus-update-activation-environment --systemd --all"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
-        "fcitx5 -d --replace" # Start fcitx5 input method
         "hypridle"
-        "ashell"
+        "noctalia-shell"
         "blueman-applet" # Bluetooth manager applet for pairing
-        "solaar -w hide" # Logitech device manager (starts minimized)
       ];
 
       monitor = [

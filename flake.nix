@@ -7,6 +7,11 @@
     ghostty.url = "github:ghostty-org/ghostty";
     ashell.url = "github:MalpenZibo/ashell";
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
