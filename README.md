@@ -1,6 +1,6 @@
 # Dotfiles
 
-![preview](.github/desktop.png)
+[![Demo](https://raw.githubusercontent.com/radar07/.dot/main/.github/assets/thumbnail.jpg)](https://raw.githubusercontent.com/radar07/.dot/main/.github/assets/demo.mp4)
 
 ## Operating system
 * [NixOS](https://nixos.org/)
