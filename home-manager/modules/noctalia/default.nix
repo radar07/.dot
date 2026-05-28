@@ -16,7 +16,7 @@
       bar = {
         density = "compact";
         position = "top";
-        barType = "floating";
+        barType = "simple";
         showCapsule = true;
         widgets = {
           left = [
