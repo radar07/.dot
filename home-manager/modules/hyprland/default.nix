@@ -75,13 +75,11 @@
 
     settings = {
       "$mod" = "SUPER";
-      "$menu" = "wofi drun";
+      # "$menu" = "wofi drun";
+      "$menu" = "noctalia-shell ipc call launcher toggle ";
       "$terminal" = "ghostty";
-      # "$terminal" = "alacritty";
-      # "$terminal" = "wezterm";
       "$fileManager" = "pcmanfm";
-      # "$browser" = "firefox";
-      "$browser" = "zen-beta";
+      "$browser" = "zen";
 
       env = [
         # Cursor settings - match home-manager config

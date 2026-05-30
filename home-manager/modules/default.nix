@@ -1,6 +1,5 @@
 {
   imports = [
-    ./alacritty
     ./bat
     ./btop
     ./fastfetch
@@ -14,11 +13,9 @@
     ./neovim
     ./noctalia
     ./starship
-    ./swaync
     ./tmux
     ./vim
     ./wezterm
-    ./wofi
     ./zathura
     ./zed
     ./zsh

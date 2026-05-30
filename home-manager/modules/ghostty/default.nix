@@ -7,6 +7,9 @@
 
     font-size = 14
 
+    font-style = Medium
+    # font-variation = "wght=700"
+
     # font-feature=zero
     # font-feature=cv02
     # font-feature=ss02

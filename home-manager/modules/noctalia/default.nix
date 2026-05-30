@@ -17,6 +17,7 @@
         density = "compact";
         position = "top";
         barType = "simple";
+        backgroundOpacity = 0.10;
         showCapsule = true;
         widgets = {
           left = [
