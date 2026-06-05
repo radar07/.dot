@@ -15,23 +15,6 @@
     sunset = "19:00";
   };
 
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      preload = [ "/home/radar/Pictures/Wallpapers/nixos-dark-rainbow.png" ];
-      wallpaper = [
-        {
-          monitor = "eDP-1";
-          path = "/home/radar/Pictures/Wallpapers/nixos-dark-rainbow.png";
-        }
-        {
-          monitor = "HDMI-A-1";
-          path = "/home/radar/Pictures/Wallpapers/nixos-dark-rainbow.png";
-        }
-      ];
-    };
-  };
-
   services.hypridle = {
     enable = true;
     settings = {
@@ -190,7 +173,6 @@
         "$mod, T, togglesplit"
         "$mod, F, fullscreen, 0"
         "$mod SHIFT, B, exec, /home/radar/.dot/scripts/reload-waybar.sh" # Reload Waybar
-        "$mod SHIFT, W, exec, /home/radar/.dot/scripts/reload-hyprpaper.sh" # Reload hyprpaper after a changing the wallpaper
 
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"
