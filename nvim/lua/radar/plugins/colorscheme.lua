@@ -8,7 +8,7 @@ return {
           transparency = true,
         },
       }
-      vim.cmd 'colorscheme rose-pine-moon'
+      -- vim.cmd 'colorscheme rose-pine-moon'
     end,
   },
   {
@@ -33,7 +33,7 @@ return {
     config = function()
       require('catppuccin').setup {
         transparent_background = true,
-        flavour = 'mocha',
+        flavour = 'frappe',
         term_colors = false,
         styles = {
           -- keywords = { "italic" },
@@ -62,7 +62,7 @@ return {
         },
       }
       -- load the colorscheme here
-      -- vim.cmd.colorscheme 'catppuccin'
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
 }
