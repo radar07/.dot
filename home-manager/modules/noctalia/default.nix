@@ -19,6 +19,7 @@
         barType = "simple";
         backgroundOpacity = 0.10;
         showCapsule = true;
+        useSeparateOpacity = true;
         widgets = {
           left = [
             {
@@ -73,7 +74,7 @@
       };
 
       colorSchemes = {
-        predefinedScheme = "Rosepine";
+        predefinedScheme = "Catppuccin";
       };
 
       location = {

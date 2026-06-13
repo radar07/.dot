@@ -11,14 +11,11 @@
     clang
     clang-tools
     rustup
-    # godot_4
-    # godot_4-export-templates-bin
     git
     gh
     lazygit
     vim
     neovim
-    helix
     openjdk21
     jetbrains.idea-oss
     jetbrains.pycharm-oss
@@ -28,7 +25,6 @@
     vscode
     vscodium
     pnpm
-    deno
     networkmanager
     pcmanfm
     pavucontrol

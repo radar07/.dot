@@ -22,7 +22,7 @@
 
     # theme = Catppuccin Frappe
 
-    background-opacity = 0.95
+    background-opacity = 0.98
     background-blur-radius = true
 
     window-padding-y = 2,0

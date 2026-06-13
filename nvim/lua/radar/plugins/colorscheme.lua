@@ -36,8 +36,8 @@ return {
         flavour = 'frappe',
         term_colors = false,
         styles = {
-          -- keywords = { "italic" },
-          -- functions = { "italic" },
+          keywords = { 'italic' },
+          functions = { 'italic' },
         },
         integrations = {
           cmp = true,
