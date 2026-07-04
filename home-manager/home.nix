@@ -91,6 +91,7 @@
 
     # comics reader
     mcomix
+    calibre
 
     # password manager
     keepassxc
