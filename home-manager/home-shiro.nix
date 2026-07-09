@@ -2,13 +2,36 @@
 
 {
   imports = [
-    ./modules
+    # CLI tools (cross-platform)
+    ./features/cli/bat
+    ./features/cli/btop
+    ./features/cli/fastfetch
+    ./features/cli/git
+    ./features/cli/gpg
+    ./features/cli/lazygit
+    ./features/cli/starship
+    ./features/cli/tmux
+    ./features/cli/vim
+    ./features/cli/zsh
+
+    # Dev tools (cross-platform)
+    ./features/dev/neovim
+    ./features/dev/zed
+
+    # Desktop — cross-platform
+    ./features/desktop/ghostty
+    ./features/desktop/ghostty/linux.nix
+    ./features/desktop/mpv
+    ./features/desktop/wezterm
+    ./features/desktop/zathura
+
+    # Desktop — Linux-only
+    ./features/desktop/linux/hyprland
+    ./features/desktop/linux/hyprlock
+    ./features/desktop/linux/noctalia
   ];
 
   nixpkgs = {
-    overlays = [
-    ];
-
     config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
@@ -17,18 +40,57 @@
 
   home.username = "radar";
   home.homeDirectory = "/home/radar";
+  home.stateVersion = "26.05";
+
+  programs.home-manager.enable = true;
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   home.packages = with pkgs; [
+    # Theming
     papirus-folders
+    adwaita-qt
+    adwaita-qt6
+    adwaita-icon-theme
+    libsForQt5.qtstyleplugin-kvantum
 
-    adwaita-qt # Qt theme matching GTK Adwaita
-    adwaita-qt6 # Qt6 support
-    adwaita-icon-theme # Base icon theme (dependency)
-    libsForQt5.qtstyleplugin-kvantum # Optional: better Qt theming
-
-    # alternate browser
+    # Alternate browser
     chromium
 
+    # Wayland screenshot / recording / clipboard
+    grim
+    slurp
+    grimblast
+    wf-recorder
+    wl-clipboard
+
+    # Applications (Linux)
+    alacritty
+    vesktop
+    obsidian
+    obs-studio
+    vlc
+    mcomix
+    calibre
+    keepassxc
+    bruno
+    darktable
+    qbittorrent
+
+    # Containers (Linux)
+    podman
+    podman-tui
+    podman-desktop
+
+    # CLI tools
     gdb
     fastfetch
     gnupg
@@ -36,18 +98,6 @@
     zoxide
     yazi
     tre-command
-
-    # open-source postman alternative
-    bruno
-
-    # lightroom alternative
-    darktable
-
-    # archives
-    unzip
-    zip
-
-    # cli tools
     ripgrep
     ast-grep
     fd
@@ -57,11 +107,11 @@
     ijq
     asdf-vm
     jujutsu
-
     btop
     htop
-
     lazygit
+    unzip
+    zip
 
     # torrent client
     qbittorrent
@@ -115,6 +165,7 @@
     uv
   ];
 
+  # GTK theming (Linux-only)
   gtk = {
     enable = true;
     theme = {
@@ -153,8 +204,4 @@
       color-scheme = "prefer-dark";
     };
   };
-
-  home.stateVersion = "26.05";
-
-  programs.home-manager.enable = true;
 }

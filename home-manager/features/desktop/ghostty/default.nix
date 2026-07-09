@@ -29,7 +29,6 @@
 
     window-theme = ghostty
     window-save-state = always
-    window-decoration = false
 
     # Keybinds
     keybind = super+shift+r=reload_config
@@ -53,11 +52,6 @@
     ## Clipboard
     keybind = ctrl+shift+c=copy_to_clipboard
     keybind = ctrl+shift+v=paste_from_clipboard
-
-    # GTK
-    gtk-single-instance = true
-    gtk-tabs-location = bottom
-    gtk-wide-tabs = false
 
     shell-integration-features = cursor,sudo
     copy-on-select = true
