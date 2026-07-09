@@ -6,7 +6,7 @@ A multi-host Nix flake managing both a NixOS desktop (`shiro`) and a macOS MacBo
 
 ---
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```
 .dot/
@@ -37,16 +37,16 @@ A multi-host Nix flake managing both a NixOS desktop (`shiro`) and a macOS MacBo
 
 ---
 
-## Hosts
+## 🖥️ Hosts
 
 | Host | OS | Architecture | Activation |
 |---|---|---|---|
-| `shiro` | NixOS (nixos-unstable) | x86\_64-linux | `nixos-rebuild switch` + standalone `home-manager switch` |
-| `kuro` | macOS — Apple Silicon | aarch64-darwin | `darwin-rebuild switch` (system + home-manager in one command) |
+| `shiro` | 🐧 NixOS (nixos-unstable) | x86\_64-linux | `nixos-rebuild switch` + standalone `home-manager switch` |
+| `kuro` | 🍎 macOS — Apple Silicon | aarch64-darwin | `darwin-rebuild switch` (system + home-manager in one command) |
 
 ---
 
-## Nix Flake Inputs
+## ❄️ Nix Flake Inputs
 
 | Input | Branch / Source | Purpose |
 |---|---|---|
@@ -60,11 +60,11 @@ A multi-host Nix flake managing both a NixOS desktop (`shiro`) and a macOS MacBo
 
 ---
 
-## System Configuration — shiro (NixOS)
+## 🐧 System Configuration — shiro (NixOS)
 
 Managed by `nixos-rebuild switch --flake .#shiro`. Config lives in `hosts/shiro/`.
 
-### Services & Hardware
+### ⚙️ Services & Hardware
 
 | Service | Notes |
 |---|---|
@@ -82,7 +82,7 @@ Managed by `nixos-rebuild switch --flake .#shiro`. Config lives in `hosts/shiro/
 | GNOME Keyring + Polkit | Credential and privilege management |
 | nix-ld | Run unpatched dynamic binaries |
 
-### System-wide Packages
+### 📦 System-wide Packages
 
 **Compiler / build toolchain**
 
@@ -134,7 +134,7 @@ Managed by `nixos-rebuild switch --flake .#shiro`. Config lives in `hosts/shiro/
 | `ghostty` | GPU-accelerated terminal (built from source) |
 | `zen-browser` | Privacy-focused Firefox-based browser |
 
-### Gaming
+### 🎮 Gaming
 
 | Package / Program | Description |
 |---|---|
@@ -146,11 +146,11 @@ Managed by `nixos-rebuild switch --flake .#shiro`. Config lives in `hosts/shiro/
 
 ---
 
-## Home Manager — Shared (both hosts)
+## 🏠 Home Manager — Shared (both hosts)
 
 Modules in `home-manager/features/` are imported by both `home-shiro.nix` and `home-kuro.nix`.
 
-### Shell & CLI (`features/cli/`)
+### 🐚 Shell & CLI (`features/cli/`)
 
 | Module | Description |
 |---|---|
@@ -172,14 +172,14 @@ Modules in `home-manager/features/` are imported by both `home-shiro.nix` and `h
 | `zoxide` | Smart directory jumper (`cd` aliased to `z`) |
 | `fzf` | Fuzzy finder with zsh integration |
 
-### Development (`features/dev/`)
+### 🛠️ Development (`features/dev/`)
 
 | Module | Description |
 |---|---|
 | `neovim` | Config is managed outside Nix in `./nvim/` (Lua) and symlinked to `~/.config/nvim`; Nix installs LSP deps (`lua-language-server`, `stylua`, `tree-sitter`, `ripgrep`, `fd`) |
 | `zed` | Zed editor with minimal config |
 
-### Desktop — Cross-platform (`features/desktop/`)
+### 🖥️ Desktop — Cross-platform (`features/desktop/`)
 
 | Module | Description |
 |---|---|
@@ -188,7 +188,7 @@ Modules in `home-manager/features/` are imported by both `home-shiro.nix` and `h
 | `mpv` | Video player — `gpu-next` renderer, hardware decode, lanczos scaling |
 | `zathura` | PDF viewer with vim-style keybinds |
 
-### Packages (both hosts)
+### 📦 Packages (both hosts)
 
 **CLI tools**
 
@@ -200,9 +200,9 @@ Modules in `home-manager/features/` are imported by both `home-shiro.nix` and `h
 
 ---
 
-## Home Manager — shiro only (Linux)
+## 🐧 Home Manager — shiro only (Linux)
 
-### Wayland & Desktop (`features/desktop/linux/`)
+### 🪟 Wayland & Desktop (`features/desktop/linux/`)
 
 | Module | Description |
 |---|---|
@@ -221,7 +221,7 @@ Modules in `home-manager/features/` are imported by both `home-shiro.nix` and `h
 | `wlsunset` | Blue-light filter (sunrise 06:00 / sunset 19:00) |
 | `swaynotificationcenter` | Notification center |
 
-### Applications (Linux)
+### 🐧 Applications (Linux)
 
 | Package | Description |
 |---|---|
@@ -238,7 +238,7 @@ Modules in `home-manager/features/` are imported by both `home-shiro.nix` and `h
 | `darktable` | Photo editing (Lightroom alternative) |
 | `chromium` | Secondary browser |
 
-### Containers (Linux)
+### 🐳 Containers (Linux)
 
 | Package | Description |
 |---|---|
@@ -246,7 +246,7 @@ Modules in `home-manager/features/` are imported by both `home-shiro.nix` and `h
 | `podman-tui` | TUI for podman |
 | `podman-desktop` | GUI for podman |
 
-### Theming (Linux)
+### 🎨 Theming (Linux)
 
 | Component | Value |
 |---|---|
@@ -256,15 +256,15 @@ Modules in `home-manager/features/` are imported by both `home-shiro.nix` and `h
 | Cursor | `catppuccin-mocha-dark` (size 16) |
 | dconf color scheme | `prefer-dark` |
 
-### Extra Packages (Linux-only)
+### ➕ Extra Packages (Linux-only)
 
 `asdf-vm` · `lua` (with busted + luafilesystem) · `luarocks`
 
 ---
 
-## Home Manager — kuro only (macOS)
+## 🍎 Home Manager — kuro only (macOS)
 
-### System Defaults (nix-darwin)
+### ⚙️ System Defaults (nix-darwin)
 
 | Setting | Value |
 |---|---|
@@ -276,7 +276,7 @@ Modules in `home-manager/features/` are imported by both `home-shiro.nix` and `h
 | Trackpad | Tap to click enabled |
 | Touch ID sudo | Enabled (also works inside tmux via `pam_reattach`) |
 
-### Homebrew Casks (declarative via nix-darwin)
+### 🍺 Homebrew Casks (declarative via nix-darwin)
 
 | Cask | Description |
 |---|---|
@@ -286,15 +286,15 @@ Modules in `home-manager/features/` are imported by both `home-shiro.nix` and `h
 | `vlc` | Media player |
 | `qbittorrent` | BitTorrent client |
 
-### Applications via nixpkgs (macOS)
+### 📦 Applications via nixpkgs (macOS)
 
 `obsidian` · `keepassxc` · `bruno` · `vlc`
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 
 - Git
 - This repo cloned to `~/.dot`
@@ -304,7 +304,7 @@ git clone https://github.com/radar07/.dot ~/.dot
 cd ~/.dot
 ```
 
-### shiro — NixOS
+### 🐧 shiro — NixOS
 
 On a fresh NixOS install, replace the generated config with this flake and rebuild:
 
@@ -318,7 +318,7 @@ home-manager switch --flake ~/.dot#shiro
 
 > If `home-manager` is not yet installed: `nix-shell -p home-manager --run "home-manager switch --flake ~/.dot#shiro"`
 
-### kuro — macOS (first time)
+### 🍎 kuro — macOS (first time)
 
 ```bash
 # 1. Install Nix (multi-user, macOS)
@@ -331,7 +331,7 @@ echo "experimental-features = nix-command flakes" | sudo tee -a /etc/nix/nix.con
 nix run nix-darwin -- switch --flake ~/.dot#kuro
 ```
 
-### kuro — macOS (subsequent)
+### 🔄 kuro — macOS (subsequent)
 
 ```bash
 darwin-rebuild switch --flake ~/.dot#kuro
@@ -341,6 +341,6 @@ darwin-rebuild switch --flake ~/.dot#kuro
 
 ---
 
-## Neovim
+## 💚 Neovim
 
 Neovim configuration lives in `./nvim/` and is intentionally managed outside Nix as plain Lua. Home-manager symlinks `~/.config/nvim` → `~/.dot/nvim` so changes take effect immediately without a rebuild. Nix only installs the external dependencies (LSP servers, formatters, CLI tools).
