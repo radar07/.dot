@@ -24,6 +24,7 @@
     meld
     vscode
     vscodium
+    nodejs
     pnpm
     networkmanager
     pcmanfm
