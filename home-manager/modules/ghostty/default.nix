@@ -7,7 +7,7 @@
 
     font-size = 14
 
-    font-style = Medium
+    # font-style = Medium
     # font-variation = "wght=700"
 
     # font-feature=zero
@@ -20,10 +20,9 @@
 
     mouse-hide-while-typing = true
 
-    # theme = Catppuccin Frappe
+    theme = Kanagawabones
 
     background-opacity = 0.98
-    background-blur-radius = true
 
     window-padding-y = 2,0
     window-padding-balance = true

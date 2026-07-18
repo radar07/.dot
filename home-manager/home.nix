@@ -84,6 +84,7 @@
 
     # applications
     alacritty
+    gimp
     vesktop
     obsidian
     obs-studio

@@ -1,5 +1,27 @@
 return {
   {
+    'rebelot/kanagawa.nvim',
+    name = 'kanagawa',
+    priority = 1000,
+    config = function()
+      -- Default options:
+      require('kanagawa').setup {
+        compile = false, -- enable compiling the colorscheme
+        undercurl = true, -- enable undercurls
+        commentStyle = { italic = true },
+        functionStyle = { italic = true },
+        keywordStyle = { italic = true },
+        statementStyle = { bold = true },
+        typeStyle = {},
+        transparent = false,
+        dimInactive = false,
+        terminalColors = true,
+        theme = 'wave',
+      }
+      vim.cmd.colorscheme 'kanagawa'
+    end,
+  },
+  {
     'rose-pine/neovim',
     name = 'rose-pine',
     config = function()
@@ -8,7 +30,7 @@ return {
           transparency = true,
         },
       }
-      -- vim.cmd 'colorscheme rose-pine-moon'
+      -- vim.cmd.colorscheme 'rose-pine-moon'
     end,
   },
   {
@@ -62,7 +84,7 @@ return {
         },
       }
       -- load the colorscheme here
-      vim.cmd.colorscheme 'catppuccin'
+      -- vim.cmd.colorscheme 'catppuccin'
     end,
   },
 }

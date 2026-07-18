@@ -22,9 +22,9 @@
         useSeparateOpacity = true;
         widgets = {
           left = [
-            {
-              id = "Launcher";
-            }
+            # {
+            #   id = "Launcher";
+            # }
             {
               id = "Workspace";
               hideUnoccupied = false;
