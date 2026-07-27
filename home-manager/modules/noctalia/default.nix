@@ -74,7 +74,7 @@
       };
 
       colorSchemes = {
-        predefinedScheme = "Catppuccin";
+        predefinedScheme = "Kanagawa";
       };
 
       location = {
