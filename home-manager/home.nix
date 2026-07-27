@@ -101,7 +101,6 @@
     cargo
     lua54Packages.luarocks
     nodePackages_latest.nodejs
-    python3
     go
     (lua.withPackages (
       ps: with ps; [
@@ -109,6 +108,8 @@
         luafilesystem
       ]
     ))
+    odin
+    python3
     tree-sitter
     terraform
     uv
