@@ -1,65 +1,67 @@
 { pkgs, ... }:
 
 {
-  xdg.configFile."ghostty/config".text = ''
-    # Fonts
-    # font-family = "FiraCode Nerd Font Mono"
+  programs.ghostty = {
+    enable = true;
 
-    font-size = 14
+    settings = {
+      # Fonts
+      # font-family = "FiraCode Nerd Font Mono";
 
-    # font-style = Medium
-    # font-variation = "wght=700"
+      font-size = 14;
 
-    # font-feature=zero
-    # font-feature=cv02
-    # font-feature=ss02
-    # font-feature=ss03
-    # font-feature=ss05
+      # font-style = Medium;
+      # font-variation = "wght=700";
 
-    window-inherit-font-size = true
+      # font-feature=zero;
+      # font-feature=cv02;
+      # font-feature=ss02;
+      # font-feature=ss03;
+      # font-feature=ss05;
 
-    mouse-hide-while-typing = true
+      window-inherit-font-size = true;
 
-    theme = Kanagawabones
+      mouse-hide-while-typing = true;
 
-    background-opacity = 0.98
+      theme = "Kanagawabones";
 
-    window-padding-y = 2,0
-    window-padding-balance = true
+      background-opacity = 0.98;
 
-    window-theme = ghostty
-    window-save-state = always
-    window-decoration = false
+      window-theme = "ghostty";
+      window-save-state = "always";
+      window-decoration = false;
 
-    # Keybinds
-    keybind = super+shift+r=reload_config
+      # Keybinds
+      keybind = [
+        "super+shift+r=reload_config"
+        ## Tabs
+        "super+shift+t=new_tab"
+        "super+shift+l=next_tab"
+        "super+shift+h=previous_tab"
 
-    ## Tabs
-    keybind = super+shift+t=new_tab
-    keybind = super+shift+l=next_tab
-    keybind = super+shift+h=previous_tab
+        "super+shift+comma=move_tab:-1"
+        "super+shift+period=move_tab:1"
+        "super+shift+m=toggle_split_zoom"
 
-    keybind = super+shift+comma=move_tab:-1
-    keybind = super+shift+period=move_tab:1
-    keybind = super+shift+m=toggle_split_zoom
+        ## Splits
+        "ctrl+h=goto_split:left"
+        "ctrl+j=goto_split:bottom"
+        "ctrl+k=goto_split:top"
+        "ctrl+l=goto_split:right"
+        "ctrl+shift+enter=new_split:auto"
 
-    ## Splits
-    keybind = ctrl+h=goto_split:left
-    keybind = ctrl+j=goto_split:bottom
-    keybind = ctrl+k=goto_split:top
-    keybind = ctrl+l=goto_split:right
-    keybind = ctrl+shift+enter=new_split:auto
+        ## Clipboard
+        "ctrl+shift+c=copy_to_clipboard"
+        "ctrl+shift+v=paste_from_clipboard"
+      ];
 
-    ## Clipboard
-    keybind = ctrl+shift+c=copy_to_clipboard
-    keybind = ctrl+shift+v=paste_from_clipboard
+      # GTK
+      gtk-single-instance = true;
+      gtk-tabs-location = "bottom";
+      gtk-wide-tabs = false;
 
-    # GTK
-    gtk-single-instance = true
-    gtk-tabs-location = bottom
-    gtk-wide-tabs = false
-
-    shell-integration-features = cursor,sudo
-    copy-on-select = true
-  '';
+      shell-integration-features = "cursor,sudo";
+      copy-on-select = true;
+    };
+  };
 }

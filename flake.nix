@@ -4,8 +4,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    ghostty.url = "github:ghostty-org/ghostty";
-
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,7 +24,6 @@
     {
       self,
       nixpkgs,
-      ghostty,
       zen-browser,
       home-manager,
       ...
@@ -54,7 +51,6 @@
             {
               environment.systemPackages = [
                 zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-                ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
               ];
             }
           )
