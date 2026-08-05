@@ -25,7 +25,7 @@
 
       theme = "Kanagawabones";
 
-      background-opacity = 0.98;
+      background-opacity = 0.95;
 
       window-theme = "ghostty";
       window-save-state = "always";

@@ -4,7 +4,7 @@
   programs.git = {
     enable = true;
     signing = {
-      key = "AE028221AB6BCAC3";
+      key = "7DCCE0029CE183F4";
     };
 
     settings = {

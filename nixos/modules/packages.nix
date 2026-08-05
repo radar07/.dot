@@ -17,8 +17,6 @@
     vim
     neovim
     openjdk21
-    jetbrains.idea-oss
-    jetbrains.pycharm-oss
     dbeaver-bin
     shotcut
     meld

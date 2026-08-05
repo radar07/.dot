@@ -5,7 +5,7 @@
     brightnessctl
     bc
     hypridle
-    swaynotificationcenter
+    # swaynotificationcenter
     xdg-desktop-portal-hyprland
   ];
 
@@ -108,7 +108,7 @@
         "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
         "hypridle"
         "noctalia-shell"
-        "blueman-applet" # Bluetooth manager applet for pairing
+        # "blueman-applet" # Bluetooth manager applet for pairing
       ];
 
       monitor = [
@@ -120,7 +120,7 @@
         gaps_in = 0;
         gaps_out = 0;
         border_size = 1;
-        "col.active_border" = "rgba(5277c3ff)";
+        "col.active_border" = "rgba(76946aff)";
         "col.inactive_border" = "rgba(ffffff00)";
         resize_on_border = false;
         allow_tearing = false;
