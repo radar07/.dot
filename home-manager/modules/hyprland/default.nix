@@ -60,7 +60,7 @@
       "$mod" = "SUPER";
       # "$menu" = "wofi drun";
       "$menu" = "noctalia-shell ipc call launcher toggle ";
-      "$terminal" = "ghostty";
+      "$terminal" = "wezterm";
       "$fileManager" = "pcmanfm";
       "$browser" = "zen";
 
@@ -106,9 +106,8 @@
         "dbus-update-activation-environment --systemd --all"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
-        "hypridle"
         "noctalia-shell"
-        # "blueman-applet" # Bluetooth manager applet for pairing
+        "anki"
       ];
 
       monitor = [

@@ -77,6 +77,10 @@
         predefinedScheme = "Kanagawa";
       };
 
+      region = {
+        applicationLanguage = "ja";
+      };
+
       location = {
         analogClockInCalendar = "true";
         name = "Bengaluru, India";
