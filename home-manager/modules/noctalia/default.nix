@@ -83,7 +83,6 @@
 
       location = {
         analogClockInCalendar = "true";
-        name = "Bengaluru, India";
         autoLocate = true;
       };
 

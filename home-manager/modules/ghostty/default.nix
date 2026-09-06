@@ -6,18 +6,17 @@
 
     settings = {
       # Fonts
-      # font-family = "FiraCode Nerd Font Mono";
+      font-family = "FiraCode Nerd Font Mono";
 
       font-size = 14;
 
-      # font-style = Medium;
-      # font-variation = "wght=700";
+      font-thicken = true;
 
-      # font-feature=zero;
-      # font-feature=cv02;
-      # font-feature=ss02;
-      # font-feature=ss03;
-      # font-feature=ss05;
+      # font-feature = zero;
+      # font-feature = cv02;
+      # font-feature = ss02;
+      # font-feature = ss03;
+      # font-feature = ss05;
 
       window-inherit-font-size = true;
 

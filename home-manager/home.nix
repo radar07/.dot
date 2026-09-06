@@ -144,7 +144,7 @@
     x11.enable = true;
     name = "catppuccin-mocha-dark-cursors";
     package = pkgs.catppuccin-cursors.mochaDark;
-    size = 16;
+    size = 18;
   };
 
   dconf.settings = {
