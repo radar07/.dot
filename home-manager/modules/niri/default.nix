@@ -152,6 +152,15 @@
 
         "Mod+O".action.toggle-overview = { };
 
+        # Monitors
+        "Mod+Shift+O".action.spawn-sh = ''
+          if niri msg --json outputs | jq -e '."eDP-1".current_mode == null' >/dev/null; then
+            niri msg output eDP-1 on
+          else
+            niri msg output eDP-1 off
+          fi
+        '';
+
         # Window management
         "Mod+Q".action.close-window = { };
         "Mod+Shift+Q".action.quit = { };
