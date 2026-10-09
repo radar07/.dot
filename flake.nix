@@ -14,6 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,6 +30,7 @@
       self,
       nixpkgs,
       zen-browser,
+      niri,
       home-manager,
       ...
     }@inputs:
@@ -46,6 +52,9 @@
         system = "x86-64_linux";
         modules = [
           ./nixos/configuration.nix
+
+          niri.nixosModules.niri
+
           (
             { pkgs, ... }:
             {
@@ -62,6 +71,8 @@
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
           ./home-manager/home.nix
+
+          niri.homeModules.niri
         ];
       };
     };

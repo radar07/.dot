@@ -7,6 +7,7 @@
     settings = {
       # Fonts
       font-family = "FiraCode Nerd Font Mono";
+      font-family-italic = "Maple Mono";
 
       font-size = 14;
 

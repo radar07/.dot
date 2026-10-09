@@ -2,6 +2,10 @@
   programs.mpv = {
     enable = true;
     config = {
+      # Subtitles
+      sub-font = "FiraCode Nerd Font Mono";
+      sub-font-size = 20;
+
       # Video output optimized for Wayland
       vo = "gpu-next"; # Best for Wayland + libplacebo
       hwdec = "auto-safe"; # Hardware decoding

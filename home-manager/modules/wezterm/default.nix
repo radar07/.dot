@@ -14,11 +14,30 @@
 
       config.color_scheme = "kanagawabones"
 
-      config.font_size = 14
+      config.font_size = 12
       config.font = wezterm.font_with_fallback({
         { family = "FiraCode Nerd Font", weight = 450 },
         { family = "JetBrains Mono Nerd Font", weight = "Regular" },
       })
+
+      config.font_rules = {
+        {
+          intensity = "Bold",
+          italic = true,
+          font = wezterm.font {
+            family = "Maple Mono",
+            weight = "Bold",
+            style = "Italic",
+          }
+        },
+        {
+          italic = true,
+          font = wezterm.font {
+            family = "Maple Mono",
+            style = "Italic",
+          }
+        }
+      }
 
       -- FiraCode
       config.harfbuzz_features = { "zero", "cv02", "ss02", "ss03", "ss05" }

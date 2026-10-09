@@ -1,5 +1,6 @@
 {
   imports = [
+    ./alacritty
     ./bat
     ./btop
     ./fastfetch
@@ -11,6 +12,7 @@
     ./lazygit
     ./mpv
     ./neovim
+    ./niri
     ./noctalia
     ./starship
     ./tmux

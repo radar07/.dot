@@ -12,5 +12,6 @@
     ./system.nix
     ./user.nix
     ./vars.nix
+    ./niri.nix
   ];
 }
