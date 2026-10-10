@@ -83,10 +83,8 @@
         };
         touchpad = {
           natural-scroll = true;
-          # Niri has no direct "sensitivity" like Hyprland; use libinput if needed
+          accel-speed = 0.7;
         };
-        # focus-follows-mouse can be enabled if you want it
-        # focus-follows-mouse = true;
       };
 
       outputs = {
@@ -117,6 +115,15 @@
         };
       };
 
+      window-rules = [
+        {
+          matches = [
+            { app-id = "ghostty"; }
+          ];
+          draw-border-with-background = false;
+        }
+      ];
+
       layout = {
         gaps = 5;
         default-column-width = {
@@ -124,14 +131,13 @@
         };
         focus-ring = {
           enable = true;
-          width = 1;
+          width = 2;
           active.color = "#76946aff";
           inactive.color = "#00000000"; # transparent-ish
         };
         border = {
-          enable = false; # you had almost no border visual
+          width = 0.5; # you had almost no border visual
         };
-        # Niri has no per-window opacity the same way; skip inactive_opacity
       };
 
       prefer-no-csd = true;
@@ -151,15 +157,6 @@
         "Mod+Escape".action.spawn = "hyprlock"; # or "swaylock"
 
         "Mod+O".action.toggle-overview = { };
-
-        # Monitors
-        "Mod+Shift+O".action.spawn-sh = ''
-          if niri msg --json outputs | jq -e '."eDP-1".current_mode == null' >/dev/null; then
-            niri msg output eDP-1 on
-          else
-            niri msg output eDP-1 off
-          fi
-        '';
 
         # Window management
         "Mod+Q".action.close-window = { };
@@ -260,9 +257,6 @@
           "3%-"
         ];
       };
-
-      # Mouse bindings (Niri has limited mouse bind support; drag is built-in with Mod)
-      # Mod + left-drag moves, Mod + right-drag resizes by default in many setups
     };
   };
 }

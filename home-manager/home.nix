@@ -54,6 +54,7 @@
     eza
     delta
     tldr
+    jq
     ijq
     asdf-vm
     jujutsu

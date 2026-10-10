@@ -1,8 +1,10 @@
 { pkgs, ... }:
 
 {
-  programs.niri.enable = true;
+  programs.niri = {
+    enable = true;
 
-  # Optional: use the unstable build from the flake
-  # programs.nir.package = pkgs.niri-unstable;
+    # Optional: use the unstable build from the flake
+    package = pkgs.niri;
+  };
 }
