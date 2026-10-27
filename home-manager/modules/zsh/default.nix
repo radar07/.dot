@@ -28,6 +28,9 @@
 
       cat = "bat";
 
+      # TUI file manager
+      spf = "superfile";
+
       # to show unicode characters in tmux sessions
       tmux = "tmux -u";
 

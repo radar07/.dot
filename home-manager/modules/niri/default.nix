@@ -102,8 +102,8 @@
         };
         "HDMI-A-1" = {
           mode = {
-            width = 1920;
-            height = 1080;
+            width = 3840;
+            height = 2160;
             refresh = 60.0;
           };
           focus-at-startup = true;

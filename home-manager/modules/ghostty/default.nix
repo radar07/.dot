@@ -13,11 +13,13 @@
 
       font-thicken = true;
 
-      # font-feature = zero;
-      # font-feature = cv02;
-      # font-feature = ss02;
-      # font-feature = ss03;
-      # font-feature = ss05;
+      font-feature = [
+        "zero"
+        "cv02"
+        "ss02"
+        "ss03"
+        "ss05"
+      ];
 
       window-inherit-font-size = true;
 

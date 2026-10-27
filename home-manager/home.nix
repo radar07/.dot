@@ -34,6 +34,7 @@
     gnupg
     gh
     zoxide
+    superfile
     yazi
     tre-command
 
