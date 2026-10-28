@@ -72,7 +72,7 @@
         { sh = "dbus-update-activation-environment --systemd --all"; }
         { sh = "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"; }
         { sh = "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"; }
-        { sh = "noctalia-shell"; }
+        { sh = "noctalia"; }
       ];
 
       input = {
@@ -148,11 +148,10 @@
         "Mod+M".action.spawn = "pcmanfm";
         "Mod+W".action.spawn = "zen";
         "Mod+Space".action.spawn = [
-          "noctalia-shell"
-          "ipc"
-          "call"
+          "noctalia"
+          "msg"
+          "panel-toggle"
           "launcher"
-          "toggle"
         ];
         "Mod+Escape".action.spawn = "hyprlock"; # or "swaylock"
 

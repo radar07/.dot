@@ -1,12 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.packages = with pkgs; [
     brightnessctl
     bc
     hypridle
-    # swaynotificationcenter
-    xdg-desktop-portal-hyprland
   ];
 
   services.wlsunset = {
@@ -48,13 +46,18 @@
     };
   };
 
+  # Force portals off on the Home Manager side
+  # (NixOS is managing them instead)
+  xdg.portal.enable = lib.mkForce false;
+
   wayland.windowManager.hyprland = {
     enable = true;
 
     xwayland.enable = true;
     systemd.enable = true;
 
-    package = pkgs.hyprland;
+    package = null;
+    portalPackage = null;
 
     settings = {
       "$mod" = "SUPER";

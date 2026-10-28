@@ -3,9 +3,8 @@
   xdg.portal = {
     enable = true;
 
-    # Use proper portals for Hyprland
     extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
+      # xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
     ];
 
