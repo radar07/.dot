@@ -15,7 +15,7 @@
     };
 
     niri = {
-      url = "github:sodiboo/niri-flake";
+      url = "github:bugeats/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -52,7 +52,6 @@
         system = "x86-64_linux";
         modules = [
           ./nixos/configuration.nix
-
           niri.nixosModules.niri
 
           (
@@ -71,7 +70,7 @@
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
           ./home-manager/home.nix
-
+          # inputs.noctalia.homeModules.default
           niri.homeModules.niri
         ];
       };

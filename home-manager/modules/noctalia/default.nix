@@ -1,6 +1,5 @@
 {
   inputs,
-  config,
   ...
 }:
 
@@ -9,91 +8,79 @@
     inputs.noctalia.homeModules.default
   ];
 
-  programs.noctalia-shell = {
+  programs.noctalia = {
     enable = true;
 
     settings = {
-      bar = {
-        density = "compact";
+      # Theme
+      theme = {
+        mode = "dark";
+        source = "builtin";
+        builtin = "Kanagawa"; # or "Catppuccin", "Noctalia", etc.
+      };
+
+      # Wallpaper
+      wallpaper = {
+        enabled = true;
+      };
+      wallpaper.default.path = "/home/radar/Pictures/Wallpapers/nixos-dark-rainbow.png";
+
+      # Shell / UI
+      shell = {
+        font_family = "FiraCode Nerd Font";
+      };
+
+      # Bar
+      bar.default = {
         position = "top";
-        barType = "simple";
-        backgroundOpacity = 0.10;
-        showCapsule = true;
-        useSeparateOpacity = true;
-        widgets = {
-          left = [
-            # {
-            #   id = "Launcher";
-            # }
-            {
-              id = "Workspace";
-              hideUnoccupied = false;
-              labelMode = "index";
-            }
-            {
-              id = "MediaMini";
-            }
-          ];
-          center = [
-            {
-              id = "Clock";
-              formatHorizontal = "HH:mm ddd, MMM dd";
-              formatVertical = "HH mm";
-              useMonospacedFont = true;
-              usePrimaryColor = false;
-            }
-          ];
-          right = [
-            {
-              id = "SystemMonitor";
-            }
-            {
-              id = "Tray";
-            }
-            {
-              id = "NotificationHistory";
-            }
-            {
-              id = "Battery";
-            }
-            {
-              id = "Volume";
-            }
-            {
-              id = "ControlCenter";
-              useDistroLogo = true;
-              icon = "noctalia"; # used when distro logo is set to false
-              enableColorization = true;
-            }
-          ];
-        };
+        background_opacity = 0.10;
+        capsule = true;
+
+        # Make the bar full width
+        margin_ends = 0;
+        margin_edge = 0;
+
+        start = [
+          "workspaces"
+          "media"
+        ];
+
+        center = [
+          "clock"
+        ];
+
+        end = [
+          "system-monitor"
+          "tray"
+          "notifications"
+          "battery"
+          "volume"
+          "control-center"
+        ];
       };
 
-      ui = {
-        fontDefault = "FiraCode Nerd Font";
+      # Widget-specific settings
+      widget.workspaces = {
+        hide_unoccupied = false;
+        label_mode = "index";
       };
 
-      colorSchemes = {
-        predefinedScheme = "Kanagawa";
+      widget.clock = {
+        format = "{:%H:%M %a, %b %d}";
       };
 
-      region = {
-        applicationLanguage = "ja";
-      };
-
-      location = {
-        analogClockInCalendar = "true";
-        autoLocate = true;
-      };
-
+      # Dock
       dock = {
         enabled = false;
       };
 
-      network = {
-
+      # Location / region
+      location = {
+        auto_locate = true;
       };
+
+      # Language (if supported in your version)
+      # shell or accessibility section may have language options — check docs
     };
-    # this may also be a string or a path to a JSON file.
   };
 }
