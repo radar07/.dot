@@ -100,6 +100,8 @@
     keepassxc
 
     # programming
+    nixd
+    nixfmt
     cargo
     lua54Packages.luarocks
     nodejs

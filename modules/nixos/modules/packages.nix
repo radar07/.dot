@@ -43,7 +43,5 @@
     eza
     zoxide
     tmux
-    nixd
-    nixfmt
   ];
 }
