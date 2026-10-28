@@ -35,44 +35,71 @@
       ...
     }@inputs:
     let
-      inherit (self) outputs;
-
-      # Supported systems
-      systems = [
-        "x86_64-linux"
-      ];
+      systems = [ "x86_64-linux" ];
 
       forAllSystems = nixpkgs.lib.genAttrs systems;
+
+      # Helper for NixOS hosts
+      mkHost =
+        {
+          name,
+          system ? "x86_64-linux",
+          extraModules ? [ ],
+        }:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/${name}/configuration.nix
+            ./modules/nixos
+          ]
+          ++ extraModules;
+        };
+
+      # Helper for Home Manager configs
+      mkHome =
+        {
+          name,
+          system ? "x86_64-linux",
+          extraModules ? [ ],
+        }:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+          extraSpecialArgs = { inherit inputs; };
+          modules = [
+            ./modules/home-manager/home.nix
+          ]
+          ++ extraModules;
+        };
     in
     {
+      nixosConfigurations = {
+        shiro = mkHost {
+          name = "shiro";
+          extraModules = [
+            niri.nixosModules.niri
+            (
+              { pkgs, ... }:
+              {
+                environment.systemPackages = [
+                  zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+                ];
+              }
+            )
+          ];
+        };
+      };
+
+      homeConfigurations = {
+        shiro = mkHome {
+          name = "shiro";
+          extraModules = [
+            niri.homeModules.niri
+          ];
+        };
+      };
+
+      # Optional: packages and devShells later
       # packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-
-      nixosConfigurations.shiro = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs; };
-        system = "x86_64-linux";
-        modules = [
-          ./nixos/configuration.nix
-          niri.nixosModules.niri
-
-          (
-            { pkgs, ... }:
-            {
-              environment.systemPackages = [
-                zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-              ];
-            }
-          )
-        ];
-      };
-
-      homeConfigurations."shiro" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = { inherit inputs outputs; };
-        modules = [
-          ./home-manager/home.nix
-          # inputs.noctalia.homeModules.default
-          niri.homeModules.niri
-        ];
-      };
     };
 }
