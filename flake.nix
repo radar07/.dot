@@ -49,7 +49,7 @@
 
       nixosConfigurations.shiro = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
-        system = "x86-64_linux";
+        system = "x86_64-linux";
         modules = [
           ./nixos/configuration.nix
           niri.nixosModules.niri
