@@ -1,0 +1,8 @@
+keys:
+  - &user_radar age17krr4esezwzhnvx6z3pus35jhpd7923rugh969ywv8dv4j58nu7st98ydy
+
+creation_rules:
+  - path_regex: secrets/.*\.yml$
+    key_groups:
+      - age:
+          - *user_radar

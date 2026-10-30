@@ -9,8 +9,7 @@
     nerd-fonts.fira-code
     nerd-fonts.iosevka
     nerd-fonts.jetbrains-mono
-    nerd-fonts.zed-mono
-    # Maple Mono (Ligature TTF unhinted)
     maple-mono.truetype
+    ioskeley-mono.nf
   ];
 }
